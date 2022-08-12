@@ -7,3 +7,12 @@
     @apply bg-[#000033] overflow-x-hidden
   }
 }
+
+.btn:hover {
+  box-shadow: 0px 0px 10px #FF5F1F;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
