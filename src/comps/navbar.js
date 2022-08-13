@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BsList } from "react-icons/bs"
 import { IoIosClose } from "react-icons/io"
 import { Link } from "react-scroll";
+import logo from "../images/logo.png"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -10,10 +11,13 @@ const Navbar = () => {
   return (
     <div className="w-full h-20 fixed top-0 bg-[#000033ed] text-white z-10 select-none">
       <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 md:pt-4">
-        <h1 className="text-xl text-[#FF5F1F]">MOE PORT</h1>
+        {/* <h1 className="text-xl text-[#FF5F1F]">MOE PORT</h1> */}
+        <Link className="cursor-pointer" to="home" smooth={true} offset={-100} duration={500}>
+          <img className="w-16" src={logo} alt="" />
+        </Link>
         {!nav
-        ? <BsList className="text-3xl md:hidden" onClick={toggle} />
-        :  <IoIosClose className="text-3xl md:hidden z-20" onClick={toggle} />}
+        ? <BsList className="text-4xl md:hidden" onClick={toggle} />
+        :  <IoIosClose className="text-5xl md:hidden z-20" onClick={toggle} />}
 
         <ul className="hidden md:flex items-center justify-center">
           <Link className="mx-12 my-4 text-lg cursor-pointer border-b-2 border-transparent ease-in-out duration-200 hover:border-[#FF5F1F]" to="home" smooth={true} offset={-100} duration={500}>Home</Link>
