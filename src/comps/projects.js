@@ -9,7 +9,7 @@ import { useState } from "react"
 const Projects = () => {
   return (
     <div name="projects" className="w-full h-full py-60 px-4 max-w-[1000px] mx-auto text-white flex flex-col items-center">
-      <h1 className="w-fit py-4 mb-6 text-5xl font-semibold border-b-4 border-[#FF5F1F]">Projects</h1>
+      <h1 className="w-fit py-4 mb-6 text-5xl font-bold border-b-4 border-[#FF5F1F]">Projects</h1>
 
       <Card img={img1} title="ZarathusTrust" url1="https://www.zarathustrust.com/" url2="https://github.com/mohsen-ameli/money-moe-linux/" body1="My first big project. It took me quite a while to build it. It was for a business project, that never actually started." body2="Please visit it via the link bellow and sign up for a new account. Then you will be able to access all of the features. I used Bootstrap and some custom CSS for the styling, django for backend and react for frontend. (although in the earlier iterations it was all django) It's been hosted on Linode, Digital Ocean, home RaspberryPi, and heroku before. It has a custom domain." />
       <Card img={img2} title="Persian Empire" url1="https://persianempire.herokuapp.com/" url2="https://github.com/mohsen-ameli/Persian-Empire/" body1="First actual website ever built. This is a blog website, which I made with the help of YouTube tutorials. " body2="I modified its functionality and added some cool features like an editor for posting. I used Bootstrap for styling and Django for the backend, as well as for the front end. It is hosted on Heroku." />

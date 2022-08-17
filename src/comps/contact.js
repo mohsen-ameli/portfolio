@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div name="contact" className="w-full h-full py-60 px-4 max-w-[1000px] mx-auto text-white flex flex-col items-center">
-      <h1 className="w-fit py-4 mb-6 text-5xl font-semibold border-b-4 border-[#FF5F1F]">Contact Me!</h1>
+      <h1 className="w-fit py-4 mb-6 text-5xl font-bold border-b-4 border-[#FF5F1F]">Contact Me!</h1>
 
       <form className="w-full flex flex-col max-w-[600px]" action="https://getform.io/f/d38815a8-e28e-454a-9f56-4067493deb2f" method="POST">
         <input className="bg-sky-900 outline-none p-2 my-4" type="name" name="name" placeholder="Name" required />
