@@ -16,3 +16,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-family: 'Raleway', sans-serif;
 }
+
+.tippy-box[data-theme~='tippy']{
+  background-color: rgb(3, 105, 161);
+  color: white;
+}
+.tippy-box[data-theme~='tippy'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: rgb(3, 105, 161);
+}

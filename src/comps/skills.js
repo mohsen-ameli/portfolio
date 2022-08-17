@@ -15,7 +15,7 @@ const Skills = () => {
   return (
     <div name="skills" className="w-full h-full px-4 py-60 max-w-[1000px] mx-auto flex flex-col items-center text-white">
       <h1 className="w-fit py-4 mb-6 text-5xl font-semibold border-b-4 border-[#FF5F1F]">Skills</h1>
-      {/* <p className="font-thin my-6">My abilities in different fields in the computer world!</p> */}
+
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-4 select-none">
         <div className="py-4 px-12 rounded-lg bg-sky-900 flex flex-col items-center hover:scale-105 ease-in-out duration-200 shadow-md shadow-black">
           <img className="w-16" src={linux} alt="" />
