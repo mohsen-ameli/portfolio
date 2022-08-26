@@ -5,10 +5,11 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
 import 'tippy.js/animations/perspective.css';
+import Container from './container';
 
 const Home = () => {
   return (
-    <div name="home" className="w-full h-screen flex flex-col justify-center md:pl-20 px-8 max-w-[1000px] mx-auto text-white">
+    <Container className="pt-44">
       <h3 className="text-[#FF5F1F]">Hi, my name is</h3>
       <h2 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-200">Mohsen Ameli</h2>
       <h1 className="text-3xl sm:text-4xl md:text-7xl font-semibold text-sky-600">
@@ -41,7 +42,7 @@ const Home = () => {
           </Tippy>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
  

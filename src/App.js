@@ -1,20 +1,13 @@
 import Navbar from "./comps/navbar";
-import Home from "./comps/home";
-import About from "./comps/about";
-import Skills from "./comps/skills";
-import Projects from "./comps/projects";
-import Contact from "./comps/contact";
+import { BrowserRouter as Router } from "react-router-dom"
+import AnimatedRoutes from "./AnimatedRoutes";
 
-function App() {
+const App = () => {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </>
+      <AnimatedRoutes />
+    </Router>
   );
 }
 

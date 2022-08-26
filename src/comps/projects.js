@@ -2,15 +2,17 @@ import img1 from "../images/zarathustrust.jpg"
 import img2 from "../images/persian-empire.jpg"
 import img3 from "../images/cute_cat.png"
 import img4 from "../images/disney+.jpeg"
+import Container from "./container"
 
 import { MdOutlineViewInAr } from "react-icons/md"
 import { BsCodeSlash } from "react-icons/bs"
 import { useState } from "react"
+import Title from "./title"
 
 const Projects = () => {
   return (
-    <div name="projects" className="w-full h-full py-60 px-4 max-w-[1000px] mx-auto text-white flex flex-col items-center">
-      <h1 className="w-fit py-4 mb-6 text-5xl font-bold border-b-4 border-[#FF5F1F]">Projects</h1>
+    <Container className="pt-24">
+      <Title title="Projects" />
 
       <Card
         img={img1} 
@@ -38,10 +40,9 @@ const Projects = () => {
         url2="https://github.com/mohsen-ameli/disney-clone"
         body1="A clone for the Disney+ website that I made for fun."
         body2="I used Tailwind, Nextjs, and firebase. It also uses the api from theMovieDB." />
-    </div>
+    </Container>
   );
 }
-
 
 const Card = ({ img, title, url1, url2, body1, body2 }) => {
   const [show, setShow] = useState(false)
@@ -49,7 +50,7 @@ const Card = ({ img, title, url1, url2, body1, body2 }) => {
   return (
     <div className="w-full flex md:flex-row flex-col justify-between text-center rounded-lg bg-sky-900 text-white my-4">
       {/* Image */}
-      <div className="md:w-1/2 h-[23rem] bg-cover bg-center bg-no-repeat bg-origin-content group rounded-lg" 
+      <div className="md:w-1/2 h-[12rem] md:h-[23rem] bg-cover bg-center bg-no-repeat bg-origin-content group rounded-lg" 
       style={{ backgroundImage: `url(${img})` }}></div>
       <div className="self-center w-full py-4">
         {/* Tittle */}
@@ -77,6 +78,5 @@ const Card = ({ img, title, url1, url2, body1, body2 }) => {
     </div>
   )
 }
-
 
 export default Projects;
