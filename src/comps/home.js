@@ -6,19 +6,26 @@ import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
 import 'tippy.js/animations/perspective.css';
 import Container from './container';
+import Item from "./item"
 
 const Home = () => {
   return (
     <Container className="pt-44">
-      <h3 className="text-[#FF5F1F]">Hi, my name is</h3>
-      <h2 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-200">Mohsen Ameli</h2>
-      <h1 className="text-3xl sm:text-4xl md:text-7xl font-semibold text-sky-600">
-        I'm a <span></span>
-        <Typed strings={['Full Stack Developer.', 'Computer Enthusiast.', 'Comp Sci Student.']} typeSpeed={120} backSpeed={70} loop></Typed>
-      </h1>
-      <p className="py-4">I build amazing, good looking, and responsive websites using front and back end tools. Two of my strongest frameworks are React and Django.</p>
+      <Item>
+        <h3 className="text-[#FF5F1F]">Hi, my name is</h3>
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-200">Mohsen Ameli</h2>
+      </Item>
+      <Item>
+        <h1 className="text-3xl sm:text-4xl md:text-7xl font-semibold text-sky-600">
+          I'm a <span></span>
+          <Typed strings={['Full Stack Developer.', 'Computer Enthusiast.', 'Comp Sci Student.']} typeSpeed={120} backSpeed={70} loop></Typed>
+        </h1>
+      </Item>
+      <Item>
+        <p className="py-4">I build amazing, good looking, and responsive websites using front and back end tools. Two of my strongest frameworks are React and Django.</p>
+      </Item>
       
-      <div className="flex items-center">
+      <Item className="flex items-center">
         <div className="grid grid-cols-3 gap-10 my-4">
           <Tippy offset={[0, 20]} content="GitHub" placement="bottom" theme="tippy" animation="perspective">
             <a className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
@@ -41,7 +48,7 @@ const Home = () => {
             </a>
           </Tippy>
         </div>
-      </div>
+      </Item>
     </Container>
   );
 }

@@ -8,6 +8,7 @@ import { MdOutlineViewInAr } from "react-icons/md"
 import { BsCodeSlash } from "react-icons/bs"
 import { useState } from "react"
 import Title from "./title"
+import Item from "./item"
 
 const Projects = () => {
   return (
@@ -48,7 +49,7 @@ const Card = ({ img, title, url1, url2, body1, body2 }) => {
   const [show, setShow] = useState(false)
   
   return (
-    <div className="w-full flex md:flex-row flex-col justify-between text-center rounded-lg bg-sky-900 text-white my-4">
+    <Item className="w-full flex md:flex-row flex-col justify-between text-center rounded-lg bg-sky-900 text-white my-4">
       {/* Image */}
       <div className="md:w-1/2 h-[12rem] md:h-[23rem] bg-cover bg-center bg-no-repeat bg-origin-content group rounded-lg" 
       style={{ backgroundImage: `url(${img})` }}></div>
@@ -75,7 +76,7 @@ const Card = ({ img, title, url1, url2, body1, body2 }) => {
           </a>
         </div>
       </div>
-    </div>
+    </Item>
   )
 }
 
