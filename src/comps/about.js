@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import Container from "./container";
-import NextBtn from "./nextBtn";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 import Title from "./title"
 
 const About = () => {
@@ -14,7 +15,9 @@ const About = () => {
         <p className="pt-10">I'm a first year computer science student. I've been programming since I was 13-14. The first language I ever learned was C, and later I learned Python and JavaScript.</p>
       </div>
 
-      <NextBtn className="my-8" text="Hmm Intereting!" to="skills" offset={150} />
+      <Link to="/skills" className="w-fit group flex items-center border cursor-pointer border-white mt-8 py-2 px-4 md:px-8 rounded-md hover:bg-[#FF5F1F] hover:border-[#FF5F1F] hover:drop-shadow-[0_5px_5px_rgba(255,255,255,0.1)]">
+        <p>Hmm Intereting!</p> <HiOutlineArrowNarrowRight className="text-white text-lg ml-2 group-hover:rotate-90 group-hover:ease-in-out duration-200" />
+      </Link>
     </Container>
   );
 }
