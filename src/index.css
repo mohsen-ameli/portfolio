@@ -13,7 +13,8 @@
 }
 body {
   font-family: 'Open Sans', sans-serif;
-  font-family: 'Caveat', cursive;
+  font-family: 'Caveat';
+  /* font-family: 'Caveat', cursive; */
 }
 .tippy-box[data-theme~='tippy']{
   background-color: rgb(3, 105, 161);
