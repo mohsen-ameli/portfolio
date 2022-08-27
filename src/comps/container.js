@@ -8,7 +8,7 @@ const containerVariant = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", mass: .5, stiffness: 100, delay: .1, staggerChildren: .2 }
+    transition: { type: "spring", mass: .5, stiffness: 100, delay: .1, staggerChildren: .35 }
   },
   exit: {
     opacity: 0,

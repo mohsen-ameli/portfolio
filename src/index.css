@@ -4,16 +4,16 @@
 
 @layer base {
   body {
-    @apply bg-[#000033]
+    @apply bg-[#000033] select-none
   }
 }
 
 .btn:hover {
-  box-shadow: 0px 0px 10px #FF5F1F;
+  box-shadow: 0px 0px 10px #ff5f1f;
 }
 body {
   font-family: 'Open Sans', sans-serif;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Caveat', cursive;
 }
 .tippy-box[data-theme~='tippy']{
   background-color: rgb(3, 105, 161);

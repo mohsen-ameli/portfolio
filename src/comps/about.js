@@ -4,12 +4,12 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 import Title from "./title"
 import Btn from "./btn";
 import Item from "./item";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <Container className="items-center pt-44">
       <Title title="About" />
-      <Btn />
       
       <Item className="grid grid-cols-2 gap-x-8 max-w-[900px]">
         <div className="flex flex-col items-end">
