@@ -3,12 +3,12 @@ import img2 from "../images/persian-empire.jpg"
 import img3 from "../images/cute_cat.png"
 import img4 from "../images/disney+.jpeg"
 import Container from "./container"
+import Title from "./title"
 
 import { MdOutlineViewInAr } from "react-icons/md"
 import { BsCodeSlash } from "react-icons/bs"
 import { useState } from "react"
-import Title from "./title"
-import Item from "./item"
+import { motion } from "framer-motion"
 
 const Projects = () => {
   return (
@@ -49,7 +49,11 @@ const Card = ({ img, title, url1, url2, body1, body2 }) => {
   const [show, setShow] = useState(false)
   
   return (
-    <Item className="w-full flex md:flex-row flex-col justify-between text-center rounded-lg bg-sky-900 text-white my-4">
+    <motion.div className="w-full flex md:flex-row flex-col justify-between text-center rounded-lg bg-sky-900 text-white my-4"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: false }}
+    >
       {/* Image */}
       <div className="md:w-1/2 h-[12rem] md:h-[23rem] bg-cover bg-center bg-no-repeat bg-origin-content group rounded-lg" 
       style={{ backgroundImage: `url(${img})` }}></div>
@@ -76,7 +80,7 @@ const Card = ({ img, title, url1, url2, body1, body2 }) => {
           </a>
         </div>
       </div>
-    </Item>
+    </motion.div>
   )
 }
 
