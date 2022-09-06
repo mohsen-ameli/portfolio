@@ -30,7 +30,7 @@ const Projects = () => {
         body2="I modified its functionality and added some cool features like an editor for posting. I used Bootstrap for styling and Django for the backend, as well as for the front end. It is hosted on Heroku." />
       <Card
         img={img3} title="Randimalz"
-        url1="https://randimalz.herokuapp.com/"
+        url1="https://randimalz.vercel.app/"
         url2="https://github.com/mohsen-ameli/randimalz/"
         body1="Fun little project I did with a few random free API's I found on github. It's website that has facts about cats and dogs, as well as some pictures and info about all animals."
         body2="I used quite a few APIs from Wikipedia, to fetch pics, search, and get information about the animals. It is powered by react in the frontend, and one small node server to get it up and running on Heroku." />
