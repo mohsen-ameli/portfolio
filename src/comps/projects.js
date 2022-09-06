@@ -20,8 +20,8 @@ const Projects = () => {
         title="ZarathusTrust"
         url1="https://www.zarathustrust.com/"
         url2="https://github.com/mohsen-ameli/money-moe-linux/"
-        body1="My first big project. It took me quite a while to build it. It was for a business project, that never actually started."
-        body2="Please visit it via the link bellow and sign up for a new account. Then you will be able to access all of the features. I used Bootstrap and some custom CSS for the styling, django for backend and react for frontend. (although in the earlier iterations it was all django) It's been hosted on Linode, Digital Ocean, home RaspberryPi, and heroku before. It has a custom domain." />
+        body1="For testing purposes please use the following credentials to login. username: test_user, password: test_pass"
+        body2="My first big project. It took me quite a while to build it. It was for a business project, that never actually started. Please visit it via the link bellow and sign up for a new account. Then you will be able to access all of the features. I used Bootstrap and some custom CSS for the styling, django for backend and react for frontend. (although in the earlier iterations it was all django) It's been hosted on Linode, Digital Ocean, home RaspberryPi, and heroku before. It has a custom domain." />
       <Card
         img={img2} title="Persian Empire"
         url1="https://persianempire.herokuapp.com/"
@@ -61,7 +61,7 @@ const Card = ({ img, title, url1, url2, body1, body2 }) => {
         {/* Tittle */}
         <h1 className="text-3xl font-semibold text-[#FF5F1F] px-4">{title}</h1>
         {/* Paragraph */}
-        <p className="text-lg leading-relaxed p-4">
+        <p className="text-lg leading-relaxed p-4 select-text">
           {body1}
           <span className={!show ? "hidden ml-1" : "ml-1"}>
             {body2}
