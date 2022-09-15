@@ -18,7 +18,7 @@ const Home = () => {
       <Item>
         <h1 className="text-3xl sm:text-4xl md:text-7xl font-semibold text-sky-600">
           I'm a <span></span>
-          <Typed strings={['Full Stack Developer.', 'Computer Enthusiast.', 'Comp Sci Student.']} typeSpeed={120} backSpeed={70} loop></Typed>
+          <Typed strings={['Full Stack Developer.', 'Computer Enthusiast.', 'Computer Science Student.']} typeSpeed={120} backSpeed={70} loop></Typed>
         </h1>
       </Item>
       <Item>

@@ -13,7 +13,7 @@ const Contact = () => {
             <Input text="name" className="w-full mr-4" />
             <Input text="email" className="w-full" title="Please enter a valid email address." pattern="[a-zA-Z0-9.-_+]+@+[a-zA-Z0-9-_+]+\.[a-z]{2,}" />
           </div>
-          <Input text="message" className="pb-40" autoComplete="off" />
+          <textarea placeholder="message" className="bg-sky-900 rounded-md outline-none p-2 placeholder:capitalize focus:placeholder:text-transparent pb-40 resize-y" autoComplete="off" />
 
           <Item className="self-center">
             <button type="submit" className="w-fit cursor-pointer mt-8 py-2 px-4 flex items-center justify-center btn font-semibold text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-lg hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150">
@@ -28,7 +28,7 @@ const Contact = () => {
 
 const Input = ({ text, className, ...props }) => {
   return (
-    <input className={`bg-sky-900 outline-none p-2 placeholder:capitalize focus:placeholder:text-transparent ${className}`} type={text} name={text} placeholder={text} required {...props} />
+    <input className={`bg-sky-900 rounded-md outline-none p-2 placeholder:capitalize focus:placeholder:text-transparent ${className}`} type={text} name={text} placeholder={text} required {...props} />
   )
 }
  

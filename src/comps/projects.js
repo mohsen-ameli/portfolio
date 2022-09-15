@@ -1,7 +1,8 @@
 import img1 from "../images/zarathustrust.jpg"
-import img2 from "../images/persian-empire.jpg"
+// import img2 from "../images/persian-empire.jpg"
 import img3 from "../images/cute_cat.png"
 import img4 from "../images/disney+.jpeg"
+import img5 from "../images/persian-food.jpg"
 import Container from "./container"
 import Title from "./title"
 
@@ -22,12 +23,12 @@ const Projects = () => {
         url2="https://github.com/mohsen-ameli/money-moe-linux/"
         body1="For testing purposes please use the following credentials to login. username: test_user, password: test_pass"
         body2="My first big project. It took me quite a while to build it. It was for a business project, that never actually started. Please visit it via the link bellow and sign up for a new account. Then you will be able to access all of the features. I used Bootstrap and some custom CSS for the styling, django for backend and react for frontend. (although in the earlier iterations it was all django) It's been hosted on Linode, Digital Ocean, home RaspberryPi, and heroku before. It has a custom domain." />
-      <Card
+      {/* <Card
         img={img2} title="Persian Empire"
         url1="https://persianempire.herokuapp.com/"
         url2="https://github.com/mohsen-ameli/Persian-Empire/"
         body1="First actual website ever built. This is a blog website, which I made with the help of YouTube tutorials. "
-        body2="I modified its functionality and added some cool features like an editor for posting. I used Bootstrap for styling and Django for the backend, as well as for the front end. It is hosted on Heroku." />
+        body2="I modified its functionality and added some cool features like an editor for posting. I used Bootstrap for styling and Django for the backend, as well as for the front end. It is hosted on Heroku." /> */}
       <Card
         img={img3} title="Randimalz"
         url1="https://randimalz.vercel.app/"
@@ -41,6 +42,13 @@ const Projects = () => {
         url2="https://github.com/mohsen-ameli/disney-clone"
         body1="A clone for the Disney+ website that I made for fun."
         body2="I used Tailwind, Nextjs, and firebase. It also uses the api from theMovieDB." />
+      <Card
+        img={img5} 
+        title="Persian Food" 
+        url1="https://persian-food.vercel.app/"
+        url2="https://github.com/mohsen-ameli/persian-food"
+        body1="A custom website for Persian grociery and food."
+        body2='I used Tailwind, React, and firebase. I also use an api from "foodish".' />
     </Container>
   );
 }
