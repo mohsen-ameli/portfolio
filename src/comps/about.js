@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import Container from "./container";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 import Title from "./title"
-import Btn from "./btn";
 import Item from "./item";
-import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -20,7 +18,7 @@ const About = () => {
 
       <Item>
         <Link to="/skills" className="w-fit group flex items-center border cursor-pointer border-white mt-8 py-2 px-4 md:px-8 rounded-md hover:bg-[#FF5F1F] hover:border-[#FF5F1F] hover:drop-shadow-[0_5px_5px_rgba(255,255,255,0.1)]">
-          <p>Hmm Intereting!</p> <HiOutlineArrowNarrowRight className="text-white text-lg ml-2 group-hover:rotate-90 group-hover:ease-in-out duration-200" />
+          <p>Hmm Interesting!</p> <HiOutlineArrowNarrowRight className="text-white text-lg ml-2 group-hover:rotate-90 group-hover:ease-in-out duration-200" />
         </Link>
       </Item>
     </Container>

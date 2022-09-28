@@ -11,9 +11,8 @@
   box-shadow: 0px 0px 10px #ff5f1f;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Caveat';
-  /* font-family: 'Caveat', cursive; */
+  font-family: 'Caveat', cursive;
+  font-family: 'Inter', sans-serif;
 }
 .tippy-box[data-theme~='tippy']{
   background-color: rgb(3, 105, 161);

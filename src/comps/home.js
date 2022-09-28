@@ -1,10 +1,12 @@
 import Typed from 'react-typed';
 
 import {BsGithub, BsTwitter, BsInstagram} from "react-icons/bs"
+import {RiNewspaperLine} from "react-icons/ri"
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
 import 'tippy.js/animations/perspective.css';
+import resume from "../images/resume_dev.pdf"
 import Container from './container';
 import Item from "./item"
 
@@ -26,7 +28,7 @@ const Home = () => {
       </Item>
       
       <Item className="flex items-center">
-        <div className="grid grid-cols-3 gap-10 my-4">
+        <div className="grid grid-cols-4 gap-10 my-4">
           <Tippy offset={[0, 20]} content="GitHub" placement="bottom" theme="tippy" animation="perspective">
             <a className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://github.com/mohsen-ameli" target="_blank" rel="noopener noreferrer">
@@ -46,6 +48,13 @@ const Home = () => {
             shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://www.instagram.com/mohsen.ameli83/" target="_blank" rel="noopener noreferrer">
               <BsInstagram size={30} />
             </a>
+          </Tippy>
+
+          <Tippy offset={[0, 20]} content="Resume" placement="bottom" theme="tippy" animation="perspective">
+            <button className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+            shadow-xl hover:scale-110 hover:ease-in-out duration-300" onClick={() => window.open(resume, '_blank')} target="_blank" rel="noopener noreferrer">
+              <RiNewspaperLine size={30} />
+            </button>
           </Tippy>
         </div>
       </Item>
