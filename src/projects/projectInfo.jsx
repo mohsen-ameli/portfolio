@@ -1,4 +1,4 @@
-export default {
+const project_info = {
   ZarathusTrust: {
     img: "/images/zarathustrust.jpg",
     title: "ZarathusTrust",
@@ -40,3 +40,5 @@ export default {
     body2: 'I used Tailwind, React, and firebase. I also use an api from "foodish".'
   }
 }
+
+export default project_info

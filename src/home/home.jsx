@@ -1,7 +1,7 @@
 import Typed from 'react-typed'
 
-import {BsGithub, BsTwitter, BsInstagram} from "react-icons/bs"
-import {RiNewspaperLine} from "react-icons/ri"
+import { BsGithub, BsTwitter, BsInstagram } from "react-icons/bs"
+import { RiNewspaperLine } from "react-icons/ri"
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light.css'
@@ -11,7 +11,7 @@ import AnimatedDiv from "../comps/animatedDiv"
 
 const Home = () => {
   return <>
-  {/* Name and other info */}
+    {/* Name and other info */}
     <Container className="pt-44">
       <AnimatedDiv>
         <h3 className="text-[#FF5F1F]">Hi, my name is</h3>
@@ -27,10 +27,10 @@ const Home = () => {
         <p className="py-4">I build amazing, good looking, and responsive websites using front and back end tools. Two of my strongest frameworks are React and Django.</p>
       </AnimatedDiv>
     </Container>
-    
+
     {/* Socials */}
-    <Container override className="fixed bottom-[35%] sm:bottom-[30%] md:bottom-[20%] left-1/2 text-white">
-      <AnimatedDiv className="flex items-center -translate-x-1/2">
+    <Container override className="fixed xs:bottom-1/3 md:bottom-1/3 left-1/2 text-white">
+      <AnimatedDiv className="flex items-center -translate-x-1/2 translate-y-full">
         <div className="flex gap-x-8 text-[22px] md:text-[30px]">
           {/* Github */}
           <Tippy offset={[0, 20]} content="GitHub" placement="bottom" theme="tippy" animation="perspective">
@@ -68,5 +68,5 @@ const Home = () => {
     </Container>
   </>
 }
- 
+
 export default Home
