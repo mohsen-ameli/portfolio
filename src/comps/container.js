@@ -17,9 +17,9 @@ const containerVariant = {
   }
 }
 
-const Container = ({ children, className }) => {
+const Container = ({ children, className, override }) => {
   return (
-      <motion.div className={`w-full h-full md:pl-20 px-8 max-w-[1000px] mx-auto flex flex-col justify-center text-white ${className}`}
+      <motion.div className={override ? className : `w-full h-full md:pl-20 px-8 max-w-[1000px] mx-auto flex flex-col justify-center text-white ${className}`}
         variants={containerVariant}
         initial="hidden"
         animate="visible"

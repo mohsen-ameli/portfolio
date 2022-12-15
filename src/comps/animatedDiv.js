@@ -5,6 +5,9 @@ const item = {
   visible: { opacity: 1 }
 }
 
+/**
+ * For entrance animation
+ */
 const AnimatedDiv = ({ children, className }) => {
   return (
     <motion.div variants={item} className={className}>

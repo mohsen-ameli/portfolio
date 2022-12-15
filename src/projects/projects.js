@@ -1,5 +1,5 @@
-import Container from "./container"
-import Title from "./title"
+import Container from "../comps/container"
+import Title from "../comps/title"
 import projectInfo from "./projectInfo"
 
 import { MdOutlineViewInAr } from "react-icons/md"
@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 const Projects = () => {
   return (
     <Container className="pt-24">
+      {/* Title */}
       <Title title="Projects" />
 
       {/* Cards */}

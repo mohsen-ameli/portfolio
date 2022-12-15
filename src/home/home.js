@@ -6,13 +6,13 @@ import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light.css'
 import 'tippy.js/animations/perspective.css'
-import Container from './container'
-import AnimatedDiv from "./animatedDiv"
+import Container from '../comps/container'
+import AnimatedDiv from "../comps/animatedDiv"
 
 const Home = () => {
-  return (
+  return <>
+  {/* Name and other info */}
     <Container className="pt-44">
-      {/* Name and other info */}
       <AnimatedDiv>
         <h3 className="text-[#FF5F1F]">Hi, my name is</h3>
         <h2 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-200">Mohsen Ameli</h2>
@@ -26,41 +26,47 @@ const Home = () => {
       <AnimatedDiv>
         <p className="py-4">I build amazing, good looking, and responsive websites using front and back end tools. Two of my strongest frameworks are React and Django.</p>
       </AnimatedDiv>
-      
-      {/* Socials */}
-      <AnimatedDiv className="flex items-center">
-        <div className="grid grid-cols-4 gap-10 my-4">
+    </Container>
+    
+    {/* Socials */}
+    <Container override className="fixed bottom-[35%] sm:bottom-[30%] md:bottom-[20%] left-1/2 text-white">
+      <AnimatedDiv className="flex items-center -translate-x-1/2">
+        <div className="flex gap-x-8 text-[22px] md:text-[30px]">
+          {/* Github */}
           <Tippy offset={[0, 20]} content="GitHub" placement="bottom" theme="tippy" animation="perspective">
             <a className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://github.com/mohsen-ameli" target="_blank" rel="noopener noreferrer">
-              <BsGithub className="" size={30} />
+              <BsGithub />
             </a>
           </Tippy>
 
+          {/* Twitter */}
           <Tippy offset={[0, 20]} content="Twitter" placement="bottom" theme="tippy" animation="perspective">
             <a className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://twitter.com/AmeliMohsen" target="_blank" rel="noopener noreferrer">
-              <BsTwitter size={30} />
+              <BsTwitter />
             </a>
           </Tippy>
 
+          {/* Instagram */}
           <Tippy offset={[0, 20]} content="Instagram" placement="bottom" theme="tippy" animation="perspective">
             <a className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://www.instagram.com/mohsen.ameli83/" target="_blank" rel="noopener noreferrer">
-              <BsInstagram size={30} />
+              <BsInstagram />
             </a>
           </Tippy>
 
+          {/* Resume */}
           <Tippy offset={[0, 20]} content="Resume" placement="bottom" theme="tippy" animation="perspective">
             <button className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-110 hover:ease-in-out duration-300" onClick={() => window.open("/images/resume_dev.pdf", '_blank')} target="_blank" rel="noopener noreferrer">
-              <RiNewspaperLine size={30} />
+              <RiNewspaperLine />
             </button>
           </Tippy>
         </div>
       </AnimatedDiv>
     </Container>
-  )
+  </>
 }
  
 export default Home

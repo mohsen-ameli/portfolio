@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom"
 import { HiOutlineArrowNarrowRight } from "react-icons/hi"
-import Container from "./container"
-import Title from "./title"
-import AnimatedDiv from "./animatedDiv"
+import Container from "../comps/container"
+import Title from "../comps/title"
+import AnimatedDiv from "../comps/animatedDiv"
 
 const About = () => {
   return (
     <Container className="items-center pt-44">
+      {/* Title */}
       <Title title="About" />
       
       <AnimatedDiv className="grid grid-cols-2 gap-x-8 max-w-[900px]">

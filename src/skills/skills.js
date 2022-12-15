@@ -1,9 +1,10 @@
-import Container from "./container"
-import Title from "./title"
+import Container from "../comps/container"
+import Title from "../comps/title"
 
 import { motion } from "framer-motion"
 
-const leftRight = {
+// Horizontal animation
+const horizontal = {
   hidden: {
     opacity: 0,
     scaleX: 0,
@@ -14,7 +15,9 @@ const leftRight = {
     transition: { duration: 1 }
   }
 }
-const topBottom = {
+
+// Vertical animation
+const vertical = {
   hidden: {
     opacity: 0,
     scaleY: 0,
@@ -26,51 +29,55 @@ const topBottom = {
   }
 }
 
+/**
+ * Main component
+ */
 const Skills = () => {
   return (
     <Container className="pt-20 pb-8 md:pb-2">
+      {/* Title */}
       <Title title="Skills" />
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 select-none">
-        <motion.div className="origin-left" variants={leftRight}>
+        <motion.div className="origin-left" variants={horizontal}>
           <Card img="/images/aws.png" name="Linux" />
         </motion.div>
-        <motion.div className="origin-bottom" variants={topBottom}>
+        <motion.div className="origin-bottom" variants={vertical}>
           <Card img="/images/css.png" name="Django" />
         </motion.div>
-        <motion.div className="origin-top" variants={topBottom}>
+        <motion.div className="origin-top" variants={vertical}>
           <Card img="/images/html.png" name="Python" />
         </motion.div>
-        <motion.div className="origin-right" variants={leftRight}>
+        <motion.div className="origin-right" variants={horizontal}>
           <Card img="/images/javascript.png" name="CSS3" />
         </motion.div>
-        <motion.div className="origin-top" variants={topBottom}>
+        <motion.div className="origin-top" variants={vertical}>
           <Card img="/images/django.jpg" name="React" />
         </motion.div>
-        <motion.div className="origin-bottom" variants={topBottom}>
+        <motion.div className="origin-bottom" variants={vertical}>
           <Card img="/images/react.png" name="Java" />
         </motion.div>
-        <motion.div className="origin-right" variants={leftRight}>
+        <motion.div className="origin-right" variants={horizontal}>
           <Card img="/images/tailwind.png" name="HTML5" />
         </motion.div>
-        <motion.div className="origin-left" variants={leftRight}>
+        <motion.div className="origin-left" variants={horizontal}>
           <Card img="/images/github.png" name="Tailwind" />
         </motion.div>
-        <motion.div className="origin-right" variants={leftRight}>
+        <motion.div className="origin-right" variants={horizontal}>
           <Card img="/images/python.png" name="Bootstrap" />
         </motion.div>
-        <motion.div className="origin-top" variants={topBottom}>
+        <motion.div className="origin-top" variants={vertical}>
           <Card img="/images/java.svg" name="Javascript" />
         </motion.div>
-        <motion.div className="origin-left" variants={leftRight}>
+        <motion.div className="origin-left" variants={horizontal}>
           <Card img="/images/bootstrap.png" name="Github" />
         </motion.div>
-        <motion.div className="origin-bottom" variants={topBottom}>
+        <motion.div className="origin-bottom" variants={vertical}>
           <Card img="/images/linux.png" name="aws" />
         </motion.div>
       </div>
     </Container>
-  );
+  )
 }
 
 const Card = ({ img, name }) => {
@@ -90,4 +97,4 @@ const Card = ({ img, name }) => {
   )
 }
  
-export default Skills;
+export default Skills

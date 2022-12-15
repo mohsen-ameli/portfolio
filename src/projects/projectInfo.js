@@ -2,7 +2,7 @@ export default {
   ZarathusTrust: {
     img: "/images/zarathustrust.jpg",
     title: "ZarathusTrust",
-    url1: "https://www.zarathustrust.com/",
+    url1: "https://zarathustrust.com/",
     url2: "https://github.com/mohsen-ameli/money-moe-linux/",
     body1: "For testing purposes please use the following credentials to login. username: test_user, password: test_pass",
     body2: "My first big project. It took me quite a while to build it. It was for a business project, that never actually started. Please visit it via the link bellow and sign up for a new account. Then you will be able to access all of the features. I used Bootstrap and some custom CSS for the styling, django for backend and react for frontend. (although in the earlier iterations it was all django) It's been hosted on Linode, Digital Ocean, home RaspberryPi, and heroku before. It has a custom domain."
@@ -16,7 +16,7 @@ export default {
     body2: "I used quite a few APIs from Wikipedia, to fetch pics, search, and get information about the animals. It is powered by react in the frontend, and one small node server to get it up and running on Heroku."
   },
   MyRoom: {
-    img: "/images/disney.jpg",
+    img: "/images/my_room.png",
     title: "My Room In 3D",
     url1: "https://heheboi.vercel.app/",
     url2: "https://github.com/mohsen-ameli/my-room",
@@ -24,7 +24,7 @@ export default {
     body2: "I used react-three-fiber to bring the experience to life and blender to model the whole scene. I also used GSAP to make the animations. Special thanks to Bruno Simon for his amazing course."
   },
   DisneyClone: {
-    img: "/images/persian_food.jpg",
+    img: "/images/disney.jpg",
     title: "Disney Clone",
     url1: "https://dizney.vercel.app/",
     url2: "https://github.com/mohsen-ameli/disney-clone/",
@@ -32,7 +32,7 @@ export default {
     body2: "I used Tailwind, Nextjs, and firebase. It also uses the api from theMovieDB."
   },
   PersianFood: {
-    img: "/images/my_room.png",
+    img: "/images/persian_food.jpg",
     title: "Persian Food",
     url1: "https://persian-food.vercel.app/",
     url2: "https://github.com/mohsen-ameli/persian-food/",
