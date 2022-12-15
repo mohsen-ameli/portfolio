@@ -1,10 +1,6 @@
-import img1 from "../images/zarathustrust.jpg"
-// import img2 from "../images/persian-empire.jpg"
-import img3 from "../images/cute_cat.png"
-import img4 from "../images/disney+.jpeg"
-import img5 from "../images/persian-food.jpg"
 import Container from "./container"
 import Title from "./title"
+import projectInfo from "./projectInfo"
 
 import { MdOutlineViewInAr } from "react-icons/md"
 import { BsCodeSlash } from "react-icons/bs"
@@ -16,41 +12,23 @@ const Projects = () => {
     <Container className="pt-24">
       <Title title="Projects" />
 
-      <Card
-        img={img1} 
-        title="ZarathusTrust"
-        url1="https://www.zarathustrust.com/"
-        url2="https://github.com/mohsen-ameli/money-moe-linux/"
-        body1="For testing purposes please use the following credentials to login. username: test_user, password: test_pass"
-        body2="My first big project. It took me quite a while to build it. It was for a business project, that never actually started. Please visit it via the link bellow and sign up for a new account. Then you will be able to access all of the features. I used Bootstrap and some custom CSS for the styling, django for backend and react for frontend. (although in the earlier iterations it was all django) It's been hosted on Linode, Digital Ocean, home RaspberryPi, and heroku before. It has a custom domain." />
-      {/* <Card
-        img={img2} title="Persian Empire"
-        url1="https://persianempire.herokuapp.com/"
-        url2="https://github.com/mohsen-ameli/Persian-Empire/"
-        body1="First actual website ever built. This is a blog website, which I made with the help of YouTube tutorials. "
-        body2="I modified its functionality and added some cool features like an editor for posting. I used Bootstrap for styling and Django for the backend, as well as for the front end. It is hosted on Heroku." /> */}
-      <Card
-        img={img3} title="Randimalz"
-        url1="https://randimalz.vercel.app/"
-        url2="https://github.com/mohsen-ameli/randimalz/"
-        body1="Fun little project I did with a few random free API's I found on github. It's website that has facts about cats and dogs, as well as some pictures and info about all animals."
-        body2="I used quite a few APIs from Wikipedia, to fetch pics, search, and get information about the animals. It is powered by react in the frontend, and one small node server to get it up and running on Heroku." />
-      <Card
-        img={img4} 
-        title="Disney Clone" 
-        url1="https://dizney.vercel.app/"
-        url2="https://github.com/mohsen-ameli/disney-clone"
-        body1="A clone for the Disney+ website that I made for fun."
-        body2="I used Tailwind, Nextjs, and firebase. It also uses the api from theMovieDB." />
-      <Card
-        img={img5} 
-        title="Persian Food" 
-        url1="https://persian-food.vercel.app/"
-        url2="https://github.com/mohsen-ameli/persian-food"
-        body1="A custom website for Persian grociery and food."
-        body2='I used Tailwind, React, and firebase. I also use an api from "foodish".' />
+      {/* Cards */}
+      {Object.keys(projectInfo).map((key, index) => {
+        return (
+          <Card
+            key={index}
+            img={projectInfo[key].img}
+            title={projectInfo[key].title}
+            url1={projectInfo[key].url1}
+            url2={projectInfo[key].url2}
+            body1={projectInfo[key].body1}
+            body2={projectInfo[key].body2}
+          />
+        )
+      })}
+
     </Container>
-  );
+  )
 }
 
 const Card = ({ img, title, url1, url2, body1, body2 }) => {
@@ -92,4 +70,4 @@ const Card = ({ img, title, url1, url2, body1, body2 }) => {
   )
 }
 
-export default Projects;
+export default Projects

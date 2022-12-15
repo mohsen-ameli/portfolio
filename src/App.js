@@ -1,6 +1,6 @@
-import Navbar from "./comps/navbar";
+import Navbar from "./comps/navbar"
 import { BrowserRouter as Router } from "react-router-dom"
-import AnimatedRoutes from "./AnimatedRoutes";
+import AnimatedRoutes from "./AnimatedRoutes"
 
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       <Navbar />
       <AnimatedRoutes />
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

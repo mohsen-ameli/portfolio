@@ -1,9 +1,6 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import logo from "../images/logo.png"
-import Btn from "./btn";
-import { MenuToggle } from "./menuToggle";
-import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { AnimatePresence, motion } from "framer-motion"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -15,7 +12,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 md:pt-4">
         {/* Logo */}
         <button className="cursor-pointer" onClick={() => navigate("/")}>
-          <motion.img drag dragSnapToOrigin={true} className="w-16" src={logo} alt="" />
+          <motion.img drag dragSnapToOrigin={true} className="w-16" src="/images/logo.png" alt="" />
         </button>
 
         {/* Hamburger Menu */}
@@ -23,11 +20,11 @@ const Navbar = () => {
 
         {/* Desktop Navbar */}
         <ul className="hidden md:flex items-center justify-center">
-          <Btn className="mx-12 my-4" text="Home" to="/" />
-          <Btn className="mx-12 my-4" text="About" to="/about" />
-          <Btn className="mx-12 my-4" text="Skills" to="/skills" />
-          <Btn className="mx-12 my-4" text="Projects" to="/projects" />
-          <Btn className="mx-12 my-4" text="Contact" to="/contact" />
+          <NavBtn className="mx-12 my-4" text="Home" to="/" />
+          <NavBtn className="mx-12 my-4" text="About" to="/about" />
+          <NavBtn className="mx-12 my-4" text="Skills" to="/skills" />
+          <NavBtn className="mx-12 my-4" text="Projects" to="/projects" />
+          <NavBtn className="mx-12 my-4" text="Contact" to="/contact" />
         </ul>
 
         {/* Mobile Navbar */}
@@ -59,7 +56,103 @@ const Navbar = () => {
         </AnimatePresence>
       </nav>
     </div>
-  );
+  )
 }
- 
-export default Navbar;
+
+/**
+ * Menu Toggle
+ */
+const MenuToggle = ({ toggle, isOpen, className }) => (
+  <motion.button
+    className={className}
+    onClick={toggle}
+    animate={isOpen ? "open" : "closed"}
+  >
+    <svg width="36" height="36" viewBox="0 0 23 23" fill="white">
+      <Path
+        variants={{
+          closed: { d: "M 2 2.5 L 20 2.5" },
+          open: { d: "M 3 16.5 L 17 2.5" }
+        }}
+      />
+      <Path
+        d="M 2 9.423 L 20 9.423"
+        variants={{
+          closed: { opacity: 1 },
+          open: { opacity: 0 }
+        }}
+        transition={{ duration: 0.1 }}
+      />
+      <Path
+        variants={{
+          closed: { d: "M 2 16.346 L 20 16.346" },
+          open: { d: "M 3 2.5 L 17 16.346" }
+        }}
+      />
+    </svg>
+  </motion.button>
+)
+
+/**
+ * Path Component
+ */
+const Path = props => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="white"
+    strokeLinecap="round"
+    {...props}
+  />
+)
+
+
+/**
+ * Nav Button Variant
+ */
+const btnVariant = {
+  hidden: {
+    opacity: 0,
+    scaleX: 0
+  },
+  visible: {
+    opacity: 1,
+    scaleX: 1,
+    transition: { 
+      type: "tween",
+      stiffness: 100,
+      mass: .5
+    }
+  }
+}
+
+/**
+ * Nav Button Component
+ */
+const NavBtn = ({ text, ...props }) => {
+  const [show, setShow] = useState(false)
+
+  return (
+    <Link {...props}>
+      <motion.div className="relative text-lg cursor-pointer text-white text-center"
+        onHoverStart={() => setShow(true)}
+        onHoverEnd={() => setShow(false)}
+      >
+        {text}
+        <AnimatePresence mode="wait">
+          {show && (
+            <motion.div
+              className="absolute w-full origin-left h-[2px] bg-[#ff5f1f]"
+              variants={btnVariant}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+            ></motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </Link>
+  )
+}
+
+export default Navbar

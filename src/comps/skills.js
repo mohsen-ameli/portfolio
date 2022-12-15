@@ -1,15 +1,3 @@
-import aws from "../images/aws.png"
-import css from "../images/css.png"
-import html from "../images/html.png"
-import js from "../images/javascript.png"
-import django from "../images/django2.jpg"
-import react from "../images/react.png"
-import tailwind from "../images/tailwind.png"
-import github from "../images/github.png"
-import python from "../images/python.png"
-import java from "../images/java.svg"
-import bootstrap from "../images/bootstrap.png"
-import linux from "../images/linux.png"
 import Container from "./container"
 import Title from "./title"
 
@@ -45,40 +33,40 @@ const Skills = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 select-none">
         <motion.div className="origin-left" variants={leftRight}>
-          <Card img={linux} name="Linux" />
+          <Card img="/images/aws.png" name="Linux" />
         </motion.div>
         <motion.div className="origin-bottom" variants={topBottom}>
-          <Card img={django} name="Django" />
+          <Card img="/images/css.png" name="Django" />
         </motion.div>
         <motion.div className="origin-top" variants={topBottom}>
-          <Card img={python} name="Python" />
+          <Card img="/images/html.png" name="Python" />
         </motion.div>
         <motion.div className="origin-right" variants={leftRight}>
-          <Card img={css} name="CSS3" />
+          <Card img="/images/javascript.png" name="CSS3" />
         </motion.div>
         <motion.div className="origin-top" variants={topBottom}>
-          <Card img={react} name="React" />
+          <Card img="/images/django.jpg" name="React" />
         </motion.div>
         <motion.div className="origin-bottom" variants={topBottom}>
-          <Card img={java} name="Java" />
+          <Card img="/images/react.png" name="Java" />
         </motion.div>
         <motion.div className="origin-right" variants={leftRight}>
-          <Card img={html} name="HTML5" />
+          <Card img="/images/tailwind.png" name="HTML5" />
         </motion.div>
         <motion.div className="origin-left" variants={leftRight}>
-          <Card img={tailwind} name="Tailwind" />
+          <Card img="/images/github.png" name="Tailwind" />
         </motion.div>
         <motion.div className="origin-right" variants={leftRight}>
-          <Card img={bootstrap} name="Bootstrap" />
+          <Card img="/images/python.png" name="Bootstrap" />
         </motion.div>
         <motion.div className="origin-top" variants={topBottom}>
-          <Card img={js} name="Javascript" />
+          <Card img="/images/java.svg" name="Javascript" />
         </motion.div>
         <motion.div className="origin-left" variants={leftRight}>
-          <Card img={github} name="Github" />
+          <Card img="/images/bootstrap.png" name="Github" />
         </motion.div>
         <motion.div className="origin-bottom" variants={topBottom}>
-          <Card img={aws} name="aws" />
+          <Card img="/images/linux.png" name="aws" />
         </motion.div>
       </div>
     </Container>

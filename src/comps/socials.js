@@ -1,8 +1,8 @@
 import {BsGithub, BsTwitter, BsInstagram} from "react-icons/bs"
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
-import 'tippy.js/themes/light.css';
-import 'tippy.js/animations/perspective.css';
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'
+import 'tippy.js/themes/light.css'
+import 'tippy.js/animations/perspective.css'
 import Container from "./container"
 
 const Socials = () => {
@@ -32,7 +32,7 @@ const Socials = () => {
         </Tippy>
       </div>
     </Container>
-  );
+  )
 }
  
-export default Socials;
+export default Socials

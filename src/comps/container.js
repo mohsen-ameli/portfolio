@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 const containerVariant = {
   hidden: {
@@ -27,7 +27,7 @@ const Container = ({ children, className }) => {
       >
       {children}
     </motion.div>
-  );
+  )
 }
  
-export default Container;
+export default Container
