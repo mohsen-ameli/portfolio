@@ -40,40 +40,40 @@ const Skills = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 select-none">
         <motion.div className="origin-left" variants={horizontal}>
-          <Card img="/images/aws.png" name="Linux" />
+          <Card img="/images/linux.png" name="Linux" />
         </motion.div>
         <motion.div className="origin-bottom" variants={vertical}>
-          <Card img="/images/css.png" name="Django" />
+          <Card img="/images/django.jpg" name="Django" />
         </motion.div>
         <motion.div className="origin-top" variants={vertical}>
-          <Card img="/images/html.png" name="Python" />
+          <Card img="/images/python.png" name="Python" />
         </motion.div>
         <motion.div className="origin-right" variants={horizontal}>
-          <Card img="/images/javascript.png" name="CSS3" />
+          <Card img="/images/java.svg" name="Java" />
         </motion.div>
         <motion.div className="origin-top" variants={vertical}>
-          <Card img="/images/django.jpg" name="React" />
+          <Card img="/images/html.png" name="HTML5" />
         </motion.div>
         <motion.div className="origin-bottom" variants={vertical}>
-          <Card img="/images/react.png" name="Java" />
+          <Card img="/images/css.png" name="CSS3" />
         </motion.div>
         <motion.div className="origin-right" variants={horizontal}>
-          <Card img="/images/tailwind.png" name="HTML5" />
+          <Card img="/images/bootstrap.png" name="Bootstrap" />
         </motion.div>
         <motion.div className="origin-left" variants={horizontal}>
-          <Card img="/images/github.png" name="Tailwind" />
+          <Card img="/images/tailwind.png" name="Tailwind" />
         </motion.div>
         <motion.div className="origin-right" variants={horizontal}>
-          <Card img="/images/python.png" name="Bootstrap" />
+          <Card img="/images/react.png" name="React" />
         </motion.div>
         <motion.div className="origin-top" variants={vertical}>
-          <Card img="/images/java.svg" name="Javascript" />
-        </motion.div>
-        <motion.div className="origin-left" variants={horizontal}>
-          <Card img="/images/bootstrap.png" name="Github" />
+          <Card img="/images/blender.png" name="Blender" />
         </motion.div>
         <motion.div className="origin-bottom" variants={vertical}>
-          <Card img="/images/linux.png" name="aws" />
+          <Card img="/images/threejs.png" name="THREE.js" />
+        </motion.div>
+        <motion.div className="origin-left" variants={horizontal}>
+          <Card img="/images/github.png" name="Github" />
         </motion.div>
       </div>
     </Container>
@@ -96,5 +96,5 @@ const Card = ({ img, name }) => {
     </motion.div>
   )
 }
- 
+
 export default Skills
