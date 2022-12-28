@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="w-full h-20 fixed top-0 bg-[#000033ed] text-white z-10 select-none">
       <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 md:pt-4">
         {/* Logo */}
-        <button className="cursor-pointer" onClick={() => navigate("/")}>
+        <button className="cursor-pointer" onClick={() => navigate("/")} title="M.A.">
           <motion.img drag dragSnapToOrigin={true} className="w-16" src="/images/logo.png" alt="" />
         </button>
 
@@ -67,6 +67,7 @@ const MenuToggle = ({ toggle, isOpen, className }) => (
     className={className}
     onClick={toggle}
     animate={isOpen ? "open" : "closed"}
+    title="Menu"
   >
     <svg width="36" height="36" viewBox="0 0 23 23" fill="white">
       <Path

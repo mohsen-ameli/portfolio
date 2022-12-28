@@ -35,7 +35,7 @@ const Home = () => {
           {/* Github */}
           <Tippy offset={[0, 20]} content="GitHub" placement="bottom" theme="tippy" animation="perspective">
             <a className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
-            shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://github.com/mohsen-ameli" target="_blank" rel="noopener noreferrer">
+            shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://github.com/mohsen-ameli" target="_blank" rel="noopener noreferrer" aria-label="Github">
               <BsGithub />
             </a>
           </Tippy>
@@ -43,7 +43,7 @@ const Home = () => {
           {/* Twitter */}
           <Tippy offset={[0, 20]} content="Twitter" placement="bottom" theme="tippy" animation="perspective">
             <a className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
-            shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://twitter.com/AmeliMohsen" target="_blank" rel="noopener noreferrer">
+            shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://twitter.com/AmeliMohsen" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <BsTwitter />
             </a>
           </Tippy>
@@ -51,7 +51,7 @@ const Home = () => {
           {/* Instagram */}
           <Tippy offset={[0, 20]} content="Instagram" placement="bottom" theme="tippy" animation="perspective">
             <a className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
-            shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://www.instagram.com/mohsen.ameli83/" target="_blank" rel="noopener noreferrer">
+            shadow-xl hover:scale-110 hover:ease-in-out duration-300" href="https://www.instagram.com/mohsen.ameli83/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <BsInstagram />
             </a>
           </Tippy>
@@ -59,7 +59,7 @@ const Home = () => {
           {/* Resume */}
           <Tippy offset={[0, 20]} content="Resume" placement="bottom" theme="tippy" animation="perspective">
             <button className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
-            shadow-xl hover:scale-110 hover:ease-in-out duration-300" onClick={() => window.open("/images/resume_dev.pdf", '_blank')} target="_blank" rel="noopener noreferrer">
+            shadow-xl hover:scale-110 hover:ease-in-out duration-300" onClick={() => window.open("/images/resume_dev.pdf", '_blank')} target="_blank" rel="noopener noreferrer" title="Resume">
               <RiNewspaperLine />
             </button>
           </Tippy>
