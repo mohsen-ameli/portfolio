@@ -21,5 +21,5 @@ const AnimatedRoutes = () => {
     </AnimatePresence>
   )
 }
- 
+
 export default AnimatedRoutes

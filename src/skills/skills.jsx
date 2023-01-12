@@ -12,8 +12,8 @@ const horizontal = {
   visible: {
     opacity: 1,
     scaleX: 1,
-    transition: { duration: 1 }
-  }
+    transition: { duration: 1 },
+  },
 }
 
 // Vertical animation
@@ -25,8 +25,8 @@ const vertical = {
   visible: {
     opacity: 1,
     scaleY: 1,
-    transition: { duration: 1 }
-  }
+    transition: { duration: 1 },
+  },
 }
 
 /**
@@ -82,17 +82,36 @@ const Skills = () => {
 
 const Card = ({ img, name }) => {
   return (
-    <motion.div className="py-4 px-12 mt-6 rounded-lg bg-sky-900 flex flex-col items-center"
+    <motion.div
+      className="py-4 px-12 mt-6 rounded-lg bg-sky-900 flex flex-col items-center"
       animate={{
-        boxShadow: "0px 0px 10px 1px rgb(14, 165, 233)"
+        boxShadow: "0px 0px 10px 1px rgb(14, 165, 233)",
       }}
       whileHover={{
         scale: 1.05,
-        transition: { repeat: Infinity, repeatType: "reverse", ease: "easeOut" }
+        transition: {
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeOut",
+        },
       }}
     >
-      <img className={"w-12 md:w-16 " + (name === "React" && "animate-[spin_5s_linear_infinite]")} src={img} alt="" />
-      <p className={"text-lg md:text-xl font-thin uppercase " + (name === "Bootstrap" ? "mt-8" : "mt-4")}>{name}</p>
+      <img
+        className={
+          "w-12 md:w-16 " +
+          (name === "React" && "animate-[spin_5s_linear_infinite]")
+        }
+        src={img}
+        alt=""
+      />
+      <p
+        className={
+          "text-lg md:text-xl font-thin uppercase " +
+          (name === "Bootstrap" ? "mt-8" : "mt-4")
+        }
+      >
+        {name}
+      </p>
     </motion.div>
   )
 }
