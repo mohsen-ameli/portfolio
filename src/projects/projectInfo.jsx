@@ -14,7 +14,8 @@ const project_info = {
     title: "My Room In 3D",
     url1: "https://heheboi.vercel.app/",
     url2: "https://github.com/mohsen-ameli/my-room",
-    body1: "I built my room in 3D just for a bit of fun, and practice.",
+    body1:
+      "I built my room in 3D just for a bit of fun, and practice. **Loading time is a bit long :(**",
     body2:
       "I used react-three-fiber to bring the experience to life and blender to model the whole scene. I also used GSAP to make the animations. Special thanks to Bruno Simon for his amazing course.",
   },
@@ -27,15 +28,6 @@ const project_info = {
     body2:
       "I used Tailwind, Nextjs, and firebase. It also uses the api from theMovieDB.",
   },
-  PersianFood: {
-    img: "/images/persian_food.jpg",
-    title: "Persian Food",
-    url1: "https://persian-food.vercel.app/",
-    url2: "https://github.com/mohsen-ameli/persian-food/",
-    body1: "A website for Persian grociery and food.",
-    body2:
-      'I used Tailwind, React, and firebase. I also use an api from "foodish".',
-  },
   Randimalz: {
     img: "/images/randimalz.png",
     title: "Randimalz",
@@ -45,6 +37,16 @@ const project_info = {
       "Fun little project I did with a few random free API's I found on github. It's website that has facts about cats and dogs, as well as some pictures and info about all animals.",
     body2:
       "I used quite a few APIs from Wikipedia, to fetch pics, search, and get information about the animals. It is powered by react in the frontend, and one small node server to get it up and running on Heroku.",
+  },
+  PersianFood: {
+    img: "/images/persian_food.jpg",
+    title: "Persian Food",
+    url1: "https://persian-food.vercel.app/",
+    url2: "https://github.com/mohsen-ameli/persian-food/",
+    body1:
+      "***THE API THAT I USED FOR THIS IS DOWN BECAUSE OF HEROKU*** A website for Persian grociery and food shopping.",
+    body2:
+      'I used Tailwind, React, and firebase, as well as an api called "foodish".',
   },
 }
 
