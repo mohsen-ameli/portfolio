@@ -7,7 +7,7 @@ const project_info = {
     body1:
       "For testing purposes please use the following credentials to login. username: test_user, password: test_pass",
     body2:
-      "My first big project. It took me quite a while to build it. It was for a business project, that never actually started. Please visit it via the link bellow and sign up for a new account. Then you will be able to access all of the features. I used Bootstrap and some custom CSS for the styling, django for backend and react for frontend. (although in the earlier iterations it was all django) It's been hosted on Linode, Digital Ocean, home RaspberryPi, and heroku before. It has a custom domain.",
+      " ---> My first big project. This took me quite a while to build. I used Bootstrap and some custom CSS for styling, Django for the backend, and React for the frontend. I've hosted this website on Linode, Digital Ocean, Heroku, and a Raspberry Pi before.",
   },
   MyRoom: {
     img: "/images/my_room.png",
@@ -15,18 +15,18 @@ const project_info = {
     url1: "https://heheboi.vercel.app/",
     url2: "https://github.com/mohsen-ameli/my-room",
     body1:
-      "I built my room in 3D just for a bit of fun, and practice. **Loading time is a bit long :(**",
+      "I built my room in 3D just for a bit of fun, and practice. **Loading time is a bit long for now, sorry :(**",
     body2:
-      "I used react-three-fiber to bring the experience to life and blender to model the whole scene. I also used GSAP to make the animations. Special thanks to Bruno Simon for his amazing course.",
+      "I used React-Three-Fiber to bring the experience to life and Blender to model the whole scene. I also used GSAP to make the animations. Special thanks to Bruno Simon for his amazing course.",
   },
   DisneyClone: {
     img: "/images/disney.jpg",
     title: "Disney Clone",
     url1: "https://dizney.vercel.app/",
     url2: "https://github.com/mohsen-ameli/disney-clone/",
-    body1: "A clone for the Disney+ website that I made for fun.",
+    body1: "A clone for the Disney+ website.",
     body2:
-      "I used Tailwind, Nextjs, and firebase. It also uses the api from theMovieDB.",
+      "I used Tailwind, Next.js, and Firebase. It also uses theMovieDB's API.",
   },
   Randimalz: {
     img: "/images/randimalz.png",
@@ -34,9 +34,9 @@ const project_info = {
     url1: "https://randimalz.vercel.app/",
     url2: "https://github.com/mohsen-ameli/randimalz/",
     body1:
-      "Fun little project I did with a few random free API's I found on github. It's website that has facts about cats and dogs, as well as some pictures and info about all animals.",
+      "Fun little project I did with a few random free API's I found on github. It's a website that has facts about cats and dogs, as well as some pictures and info about all animals.",
     body2:
-      "I used quite a few APIs from Wikipedia, to fetch pics, search, and get information about the animals. It is powered by react in the frontend, and one small node server to get it up and running on Heroku.",
+      "I used quite a few APIs. MewFacts, the cat api, dog api, and random.dog, but I mainly used Wikipedia, to fetch pictures, search, and get information about the animals. It is powered by React in the frontend and a small node server to get it up and running on Vercel.",
   },
   PersianFood: {
     img: "/images/persian_food.jpg",
@@ -46,7 +46,7 @@ const project_info = {
     body1:
       "***THE API THAT I USED FOR THIS IS DOWN BECAUSE OF HEROKU*** A website for Persian grociery and food shopping.",
     body2:
-      'I used Tailwind, React, and firebase, as well as an api called "foodish".',
+      "I used Tailwind, React, and Firebase, as well as an API called foodish.",
   },
 }
 
