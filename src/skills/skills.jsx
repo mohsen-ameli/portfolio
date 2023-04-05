@@ -40,40 +40,40 @@ const Skills = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 select-none">
         <motion.div className="origin-left" variants={horizontal}>
-          <Card img="/images/linux.png" name="Linux" />
+          <Card img="/images/skills/linux.png" name="Linux" />
         </motion.div>
         <motion.div className="origin-bottom" variants={vertical}>
-          <Card img="/images/django.jpg" name="Django" />
+          <Card img="/images/skills/django.jpg" name="Django" />
         </motion.div>
         <motion.div className="origin-top" variants={vertical}>
-          <Card img="/images/python.png" name="Python" />
+          <Card img="/images/skills/python.png" name="Python" />
         </motion.div>
         <motion.div className="origin-right" variants={horizontal}>
-          <Card img="/images/java.svg" name="Java" />
+          <Card img="/images/skills/java.svg" name="Java" />
         </motion.div>
         <motion.div className="origin-top" variants={vertical}>
-          <Card img="/images/html.png" name="HTML5" />
+          <Card img="/images/skills/html.png" name="HTML5" />
         </motion.div>
         <motion.div className="origin-bottom" variants={vertical}>
-          <Card img="/images/css.png" name="CSS3" />
+          <Card img="/images/skills/css.png" name="CSS3" />
         </motion.div>
         <motion.div className="origin-right" variants={horizontal}>
-          <Card img="/images/bootstrap.png" name="Bootstrap" />
+          <Card img="/images/skills/bootstrap.png" name="Bootstrap" />
         </motion.div>
         <motion.div className="origin-left" variants={horizontal}>
-          <Card img="/images/tailwind.png" name="Tailwind" />
+          <Card img="/images/skills/tailwind.png" name="Tailwind" />
         </motion.div>
         <motion.div className="origin-right" variants={horizontal}>
-          <Card img="/images/react.png" name="React" />
+          <Card img="/images/skills/react.png" name="React" />
         </motion.div>
         <motion.div className="origin-top" variants={vertical}>
-          <Card img="/images/blender.png" name="Blender" />
+          <Card img="/images/skills/blender.png" name="Blender" />
         </motion.div>
         <motion.div className="origin-bottom" variants={vertical}>
-          <Card img="/images/threejs.png" name="THREE.js" />
+          <Card img="/images/skills/threejs.png" name="THREE.js" />
         </motion.div>
         <motion.div className="origin-left" variants={horizontal}>
-          <Card img="/images/github.png" name="Github" />
+          <Card img="/images/skills/github.png" name="Github" />
         </motion.div>
       </div>
     </Container>

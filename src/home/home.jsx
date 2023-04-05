@@ -122,7 +122,7 @@ const Home = () => {
               <button
                 className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-110 hover:ease-in-out duration-300"
-                onClick={() => window.open("/images/resume_dev.pdf", "_blank")}
+                onClick={() => window.open("/resume/resume_dev.pdf", "_blank")}
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Resume"

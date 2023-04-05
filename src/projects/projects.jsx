@@ -1,6 +1,6 @@
 import Container from "../comps/container"
 import Title from "../comps/title"
-import projectInfo from "./projectInfo"
+import { projectInfo } from "./projectInfo"
 
 import { MdOutlineViewInAr } from "react-icons/md"
 import { BsCodeSlash } from "react-icons/bs"

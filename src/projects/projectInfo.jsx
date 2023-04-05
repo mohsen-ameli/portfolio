@@ -1,6 +1,15 @@
-const project_info = {
+export const projectInfo = {
+  backgammon: {
+    img: "/images/projects/3d-backgammon.jpg",
+    title: "3D-Backgammon",
+    url1: "https://3d-backgammon.vercel.app/",
+    url2: "https://github.com/mohsen-ameli/3d-backgammon",
+    body1: "An online interactive single and multiplayer 3D backgammon game.",
+    body2:
+      "Built with React-Three-Fiber, Blender, Django, PyTorch, GSAP, React-Three-Rapier, and more. This is a fun project that I'm still working on. Feel free to check it out and play a couple games :)",
+  },
   ZarathusTrust: {
-    img: "/images/zarathustrust.jpg",
+    img: "/images/projects/zarathustrust.jpg",
     title: "ZarathusTrust",
     url1: "https://zarathustrust.com/",
     url2: "https://github.com/mohsen-ameli/money-moe-linux/",
@@ -10,7 +19,7 @@ const project_info = {
       " ---> My first big project. This took me quite a while to build. I used Bootstrap and some custom CSS for styling, Django for the backend, and React for the frontend. I've hosted this website on Linode, Digital Ocean, Heroku, and a Raspberry Pi before.",
   },
   MyRoom: {
-    img: "/images/my_room.png",
+    img: "/images/projects/my_room.png",
     title: "My Room In 3D",
     url1: "https://heheboi.vercel.app/",
     url2: "https://github.com/mohsen-ameli/my-room",
@@ -20,7 +29,7 @@ const project_info = {
       "I used React-Three-Fiber to bring the experience to life and Blender to model the whole scene. I also used GSAP to make the animations. Special thanks to Bruno Simon for his amazing course.",
   },
   DisneyClone: {
-    img: "/images/disney.jpg",
+    img: "/images/projects/disney.jpg",
     title: "Disney Clone",
     url1: "https://dizney.vercel.app/",
     url2: "https://github.com/mohsen-ameli/disney-clone/",
@@ -29,7 +38,7 @@ const project_info = {
       "I used Tailwind, Next.js, and Firebase. It also uses theMovieDB's API.",
   },
   Randimalz: {
-    img: "/images/randimalz.png",
+    img: "/images/projects/randimalz.png",
     title: "Randimalz",
     url1: "https://randimalz.vercel.app/",
     url2: "https://github.com/mohsen-ameli/randimalz/",
@@ -39,7 +48,7 @@ const project_info = {
       "I used quite a few APIs. MewFacts, the cat api, dog api, and random.dog, but I mainly used Wikipedia, to fetch pictures, search, and get information about the animals. It is powered by React in the frontend and a small node server to get it up and running on Vercel.",
   },
   PersianFood: {
-    img: "/images/persian_food.jpg",
+    img: "/images/projects/persian_food.jpg",
     title: "Persian Food",
     url1: "https://persian-food.vercel.app/",
     url2: "https://github.com/mohsen-ameli/persian-food/",
@@ -49,5 +58,3 @@ const project_info = {
       "I used Tailwind, React, and Firebase, as well as an API called foodish.",
   },
 }
-
-export default project_info
