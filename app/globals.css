@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom css */
+.btn:hover {
+  box-shadow: 0px 0px 10px #ff5f1f;
+}
+
+.tippy-box[data-theme~="tippy"] {
+  background-color: rgb(3, 105, 161);
+  color: white;
+}
+
+.tippy-box[data-theme~="tippy"][data-placement^="top"] > .tippy-arrow::before {
+  border-top-color: rgb(3, 105, 161);
+}
