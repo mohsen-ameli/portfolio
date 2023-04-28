@@ -1,116 +1,135 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+"use client"
 
-const inter = Inter({ subsets: ['latin'] })
+import Typed from "react-typed"
+import { BsGithub, BsTwitter, BsInstagram } from "react-icons/bs"
+import { RiNewspaperLine } from "react-icons/ri"
+import Tippy from "@tippyjs/react"
+import "tippy.js/dist/tippy.css"
+import "tippy.js/themes/light.css"
+import "tippy.js/animations/perspective.css"
+import AnimatedDiv from "@/components/ui/AnimatedDiv"
+import Link from "next/link"
+import Container from "@/components/ui/Container"
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className="h-screen pb-24">
+      <Container>
+        {/* Name and other info */}
+        <AnimatedDiv>
+          <div className="text-[#FF5F1F]">Hi, my name is</div>
+          <div className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-200">
+            Mohsen Ameli
+          </div>
+        </AnimatedDiv>
+        <AnimatedDiv>
+          <div className="text-3xl sm:text-4xl md:text-7xl font-semibold text-sky-600">
+            I&apos;m a <span></span>
+            <Typed
+              strings={[
+                "Full Stack Developer.",
+                "Computer Enthusiast.",
+                "Computer Science Student.",
+              ]}
+              typeSpeed={120}
+              backSpeed={70}
+              loop
             />
-          </a>
+          </div>
+        </AnimatedDiv>
+        <AnimatedDiv className="py-4">
+          I build amazing, good looking, and responsive websites using front and
+          back end tools. Two of my strongest frameworks are React and Django.
+        </AnimatedDiv>
+      </Container>
+      {/* Socials */}
+      <AnimatedDiv className="absolute bottom-10 -translate-x-1/2 left-1/2 text-white">
+        <div className="flex gap-x-12 md:text-[30px]">
+          {/* Github */}
+          <Tippy
+            className="text-xl"
+            offset={[0, 20]}
+            content="GitHub"
+            placement="bottom"
+            theme="tippy"
+            animation="perspective"
+          >
+            <Link
+              className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+            shadow-xl hover:scale-125 hover:ease-in-out duration-300"
+              href="https://github.com/mohsen-ameli"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Github"
+            >
+              <BsGithub />
+            </Link>
+          </Tippy>
+          {/* Twitter */}
+          <Tippy
+            className="text-xl"
+            offset={[0, 20]}
+            content="Twitter"
+            placement="bottom"
+            theme="tippy"
+            animation="perspective"
+          >
+            <Link
+              className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+            shadow-xl hover:scale-125 hover:ease-in-out duration-300"
+              href="https://twitter.com/AmeliMohsen"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <BsTwitter />
+            </Link>
+          </Tippy>
+          {/* Instagram */}
+          <Tippy
+            className="text-xl"
+            offset={[0, 20]}
+            content="Instagram"
+            placement="bottom"
+            theme="tippy"
+            animation="perspective"
+          >
+            <Link
+              className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+            shadow-xl hover:scale-125 hover:ease-in-out duration-300"
+              href="https://www.instagram.com/mohsen.ameli83/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <BsInstagram />
+            </Link>
+          </Tippy>
+          {/* Resume */}
+          <Tippy
+            className="text-xl"
+            offset={[0, 20]}
+            content="Resume"
+            placement="bottom"
+            theme="tippy"
+            animation="perspective"
+          >
+            <button
+              className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+            shadow-xl hover:scale-125 hover:ease-in-out duration-300"
+              onClick={() => window.open("/resume/resume_dev.pdf", "_blank")}
+              // @ts-ignore
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Resume"
+            >
+              <RiNewspaperLine />
+            </button>
+          </Tippy>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </AnimatedDiv>
+    </div>
   )
 }
+
+export default Home
