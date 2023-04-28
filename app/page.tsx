@@ -7,9 +7,9 @@ import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 import "tippy.js/themes/light.css"
 import "tippy.js/animations/perspective.css"
-import AnimatedDiv from "@/components/ui/AnimatedDiv"
+import AnimatedDiv from "@/components/AnimatedDiv"
 import Link from "next/link"
-import Container from "@/components/ui/Container"
+import Container from "@/components/Container"
 
 const Home = () => {
   return (

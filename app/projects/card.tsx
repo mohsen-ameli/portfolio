@@ -29,8 +29,8 @@ const Card = ({ img, title, url1, url2, body1, body2 }: CardProps) => {
         className="md:h-[400px] md:max-w-[350px] h-[250px] w-full bg-cover object-cover bg-center bg-no-repeat bg-origin-content group rounded-lg"
         src={img}
         alt={title}
-        width={1000}
-        height={1000}
+        width={700}
+        height={700}
         quality={100}
       />
 

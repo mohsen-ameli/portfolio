@@ -1,6 +1,6 @@
 import "./globals.css"
 import { Node } from "@/types/main.type"
-import Navbar from "@/components/ui/Navbar"
+import Navbar from "@/components/Navbar"
 import { Caveat } from "next/font/google"
 import Layout from "./_layout"
 

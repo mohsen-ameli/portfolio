@@ -1,8 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Title from "@/components/ui/Title"
-import Container from "@/components/ui/Container"
+import Title from "@/components/Title"
+import Container from "@/components/Container"
 import Card from "./card"
 import { skillsList } from "./skillsList"
 

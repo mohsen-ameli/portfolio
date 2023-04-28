@@ -1,7 +1,7 @@
 "use client"
 
-import Container from "@/components/ui/Container"
-import Title from "@/components/ui/Title"
+import Container from "@/components/Container"
+import Title from "@/components/Title"
 import { projectsList } from "./projectsList"
 import Card from "./card"
 

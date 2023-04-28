@@ -32,7 +32,6 @@ const Card = ({ img, name }: CardProps) => {
         quality={100}
         src={img}
         alt={name}
-        priority
       />
       <p
         className={

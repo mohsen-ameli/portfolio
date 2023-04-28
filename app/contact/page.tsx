@@ -1,8 +1,8 @@
 "use client"
 
-import AnimatedDiv from "@/components/ui/AnimatedDiv"
-import Container from "@/components/ui/Container"
-import Title from "@/components/ui/Title"
+import AnimatedDiv from "@/components/AnimatedDiv"
+import Container from "@/components/Container"
+import Title from "@/components/Title"
 import React from "react"
 import Input from "./input"
 

@@ -2,9 +2,9 @@
 
 import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 import Link from "next/link"
-import AnimatedDiv from "@/components/ui/AnimatedDiv"
-import Title from "@/components/ui/Title"
-import Container from "@/components/ui/Container"
+import AnimatedDiv from "@/components/AnimatedDiv"
+import Title from "@/components/Title"
+import Container from "@/components/Container"
 
 const About = () => {
   return (
