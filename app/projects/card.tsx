@@ -36,14 +36,16 @@ const Card = ({ img, title, url1, url2, body1, body2 }: CardProps) => {
 
       <div className="self-center w-full py-4">
         {/* Tittle */}
-        <h1 className="text-4xl font-semibold text-[#FF5F1F] px-4">{title}</h1>
+        <h1 className="text-3xl md:text-4xl font-semibold text-[#FF5F1F] px-4">
+          {title}
+        </h1>
 
         {/* Paragraph */}
-        <p className="text-xl leading-relaxed p-4 select-text">
+        <p className="text-lg md:text-xl leading-relaxed p-4 select-text">
           {body1}
           <span className={!show ? "hidden ml-1" : "ml-1"}>{body2}</span>
           <button
-            className="mx-2 px-1 text-lg btn text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-md hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
+            className="mx-2 px-1 btn text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-md hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
             onClick={() => setShow(!show)}
           >
             {!show ? "View More" : "View Less"}
@@ -51,12 +53,12 @@ const Card = ({ img, title, url1, url2, body1, body2 }: CardProps) => {
         </p>
 
         {/* Buttons */}
-        <div className="flex justify-center">
+        <div className="flex justify-evenly">
           <Link
             href={url1}
             target="_blank"
             rel="noreferrer"
-            className="cursor-pointer mt-4 py-1 px-4 mx-4 flex items-center justify-center btn font-semibold text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-lg hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
+            className="cursor-pointer mt-4 py-1 text-lg md:text-xl px-4 flex items-center justify-center btn font-semibold text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-lg hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
           >
             <MdOutlineViewInAr className="mx-2" size={25} /> View
           </Link>
@@ -64,7 +66,7 @@ const Card = ({ img, title, url1, url2, body1, body2 }: CardProps) => {
             href={url2}
             target="_blank"
             rel="noreferrer"
-            className="cursor-pointer mt-4 py-1 px-4 mx-4 flex items-center justify-center btn font-semibold text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-lg hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
+            className="cursor-pointer mt-4 py-1 text-lg md:text-xl px-4 flex items-center justify-center btn font-semibold text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-lg hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
           >
             <BsCodeSlash className="mx-2" size={25} /> Code
           </Link>

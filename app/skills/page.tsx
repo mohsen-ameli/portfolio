@@ -12,7 +12,7 @@ import { skillsList } from "./skillsList"
 const Skills = () => {
   return (
     <Container>
-      <Title title="Skills" />
+      <Title title="Some of My Skills" />
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 select-none">
         {skillsList.map(skill => (

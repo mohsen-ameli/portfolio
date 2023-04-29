@@ -44,10 +44,9 @@ const Container = ({
     <motion.div
       style={style}
       className={
-        "pt-20 " +
-        (override
+        override
           ? className
-          : `w-full h-full text-2xl md:pl-20 px-8 py-4 max-w-[1000px] mx-auto flex flex-col justify-center text-white ${className}`)
+          : `w-full h-full text-2xl md:pl-20 px-8 py-4 max-w-[1000px] mx-auto flex flex-col justify-center text-white ${className}`
       }
       variants={containerVariant}
       initial="hidden"

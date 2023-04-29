@@ -1,7 +1,7 @@
 "use client"
 
 import Typed from "react-typed"
-import { BsGithub, BsTwitter, BsInstagram } from "react-icons/bs"
+import { BsGithub, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs"
 import { RiNewspaperLine } from "react-icons/ri"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
@@ -13,17 +13,18 @@ import Container from "@/components/Container"
 
 const Home = () => {
   return (
-    <div className="h-screen pb-24">
-      <Container>
+    <div>
+      <Container className="pt-8 md:pt-32">
         {/* Name and other info */}
         <AnimatedDiv>
           <div className="text-[#FF5F1F]">Hi, my name is</div>
-          <div className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-200">
-            Mohsen Ameli
+          <div className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-100">
+            <span className="text-[#FF5F1F] font-serif">M</span>ohsen{" "}
+            <span className="text-[#FF5F1F] font-serif">A</span>meli
           </div>
         </AnimatedDiv>
         <AnimatedDiv>
-          <div className="text-3xl sm:text-4xl md:text-7xl font-semibold text-sky-600">
+          <div className="text-3xl sm:text-4xl md:text-[55px] md:leading-[1] font-semibold text-sky-600">
             I&apos;m a <span></span>
             <Typed
               strings={[
@@ -37,25 +38,30 @@ const Home = () => {
             />
           </div>
         </AnimatedDiv>
-        <AnimatedDiv className="py-4">
-          I build amazing, good looking, and responsive websites using front and
-          back end tools. Two of my strongest frameworks are React and Django.
+        <AnimatedDiv className="py-4 text-2xl text-sky-100">
+          <Typed
+            strings={[
+              "I build amazing, good looking, and responsive websites using front and back end tools. Two of my favorite frameworks are React and Django.",
+            ]}
+            typeSpeed={50}
+          />
         </AnimatedDiv>
       </Container>
+
       {/* Socials */}
-      <AnimatedDiv className="absolute bottom-10 -translate-x-1/2 left-1/2 text-white">
-        <div className="flex gap-x-12 md:text-[30px]">
+      <AnimatedDiv className="fixed bottom-[10%] -translate-x-1/2 left-1/2 text-white">
+        <div className="flex gap-x-8 md:gap-x-12 md:text-[30px]">
           {/* Github */}
           <Tippy
             className="text-xl"
             offset={[0, 20]}
             content="GitHub"
-            placement="bottom"
+            placement="top"
             theme="tippy"
             animation="perspective"
           >
             <Link
-              className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+              className="p-4 text-3xl mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-125 hover:ease-in-out duration-300"
               href="https://github.com/mohsen-ameli"
               target="_blank"
@@ -65,17 +71,37 @@ const Home = () => {
               <BsGithub />
             </Link>
           </Tippy>
+          {/* LinkedIn */}
+          <Tippy
+            className="text-xl"
+            offset={[0, 20]}
+            content="LinkedIn"
+            placement="top"
+            theme="tippy"
+            animation="perspective"
+          >
+            <Link
+              className="p-4 text-3xl mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+            shadow-xl hover:scale-125 hover:ease-in-out duration-300"
+              href="https://www.linkedin.com/in/mohsen-ameli-365b5917a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <BsLinkedin />
+            </Link>
+          </Tippy>
           {/* Twitter */}
           <Tippy
             className="text-xl"
             offset={[0, 20]}
             content="Twitter"
-            placement="bottom"
+            placement="top"
             theme="tippy"
             animation="perspective"
           >
             <Link
-              className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+              className="p-4 text-3xl mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-125 hover:ease-in-out duration-300"
               href="https://twitter.com/AmeliMohsen"
               target="_blank"
@@ -85,37 +111,17 @@ const Home = () => {
               <BsTwitter />
             </Link>
           </Tippy>
-          {/* Instagram */}
-          <Tippy
-            className="text-xl"
-            offset={[0, 20]}
-            content="Instagram"
-            placement="bottom"
-            theme="tippy"
-            animation="perspective"
-          >
-            <Link
-              className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
-            shadow-xl hover:scale-125 hover:ease-in-out duration-300"
-              href="https://www.instagram.com/mohsen.ameli83/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <BsInstagram />
-            </Link>
-          </Tippy>
           {/* Resume */}
           <Tippy
             className="text-xl"
             offset={[0, 20]}
             content="Resume"
-            placement="bottom"
+            placement="top"
             theme="tippy"
             animation="perspective"
           >
             <button
-              className="p-4 mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
+              className="p-4 text-3xl mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-125 hover:ease-in-out duration-300"
               onClick={() => window.open("/resume/resume_dev.pdf", "_blank")}
               // @ts-ignore

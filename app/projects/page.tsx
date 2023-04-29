@@ -1,16 +1,12 @@
 "use client"
 
 import Container from "@/components/Container"
-import Title from "@/components/Title"
 import { projectsList } from "./projectsList"
 import Card from "./card"
 
 const Projects = () => {
   return (
-    <Container className="pt-24">
-      <Title title="Projects" />
-
-      {/* Cards */}
+    <Container>
       {projectsList.map((proj, index) => {
         return (
           <Card

@@ -8,7 +8,7 @@ import Input from "./input"
 
 const Contact = () => {
   return (
-    <Container className="pt-24">
+    <Container>
       <Title title="Contact Me!" />
 
       <form

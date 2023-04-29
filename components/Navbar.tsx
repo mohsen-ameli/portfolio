@@ -3,81 +3,85 @@
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const toggle = () => setNav(!nav)
 
   return (
-    <div className="w-full h-20 fixed top-0 bg-[#000033ed] text-white z-10 select-none">
-      <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 md:pt-4">
-        {/* Logo */}
-        <Link href="/" className="cursor-pointer" title="M.A.">
-          <motion.img
-            drag
-            dragSnapToOrigin={true}
-            className="w-16"
-            src="/images/logo.png"
-            alt=""
+    <>
+      <div className="w-full h-20 bg-transparent" />
+      <div className="w-full h-20 fixed top-0 bg-[#000033ed] text-white z-10 select-none">
+        <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 md:pt-4">
+          {/* Logo */}
+          <Link href="/" className="cursor-pointer" title="M.A.">
+            <motion.img
+              drag
+              dragSnapToOrigin={true}
+              className="w-16"
+              src="/images/logo.png"
+              alt=""
+            />
+          </Link>
+
+          {/* Hamburger Menu */}
+          <MenuToggle
+            className="md:hidden p-4 z-20"
+            toggle={() => toggle()}
+            isOpen={nav}
           />
-        </Link>
 
-        {/* Hamburger Menu */}
-        <MenuToggle
-          className="md:hidden p-4 z-20"
-          toggle={() => toggle()}
-          isOpen={nav}
-        />
+          {/* Desktop Navbar */}
+          <ul className="hidden md:flex items-center gap-x-32">
+            <NavBtn text="Home" href="/" />
+            <NavBtn text="About" href="/about" />
+            <NavBtn text="Skills" href="/skills" />
+            <NavBtn text="Projects" href="/projects" />
+            <NavBtn text="Contact" href="/contact" />
+          </ul>
 
-        {/* Desktop Navbar */}
-        <ul className="hidden md:flex items-center gap-x-32">
-          <NavBtn text="Home" href="/" />
-          <NavBtn text="About" href="/about" />
-          <NavBtn text="Skills" href="/skills" />
-          <NavBtn text="Projects" href="/projects" />
-          <NavBtn text="Contact" href="/contact" />
-        </ul>
-
-        {/* Mobile Navbar */}
-        <AnimatePresence mode="wait">
-          {nav && (
-            <motion.ul
-              className="absolute md:hidden top-0 left-0 h-screen w-screen flex flex-col items-center justify-center bg-[#000033]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ ease: "easeInOut", duration: 0.2 }}
-            >
-              <motion.li className="text-3xl cursor-pointer py-8">
-                <Link onClick={toggle} href="/">
-                  Home
-                </Link>
-              </motion.li>
-              <motion.li className="text-3xl cursor-pointer py-8">
-                <Link onClick={toggle} href="/about">
-                  About
-                </Link>
-              </motion.li>
-              <motion.li className="text-3xl cursor-pointer py-8">
-                <Link onClick={toggle} href="/skills">
-                  Skills
-                </Link>
-              </motion.li>
-              <motion.li className="text-3xl cursor-pointer py-8">
-                <Link onClick={toggle} href="/projects">
-                  Projects
-                </Link>
-              </motion.li>
-              <motion.li className="text-3xl cursor-pointer py-8">
-                <Link onClick={toggle} href="/contact">
-                  Contact
-                </Link>
-              </motion.li>
-            </motion.ul>
-          )}
-        </AnimatePresence>
-      </nav>
-    </div>
+          {/* Mobile Navbar */}
+          <AnimatePresence mode="wait">
+            {nav && (
+              <motion.ul
+                className="absolute md:hidden top-0 left-0 h-screen w-screen flex flex-col items-center justify-center bg-[#000033]"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: "easeInOut", duration: 0.2 }}
+              >
+                <motion.li className="text-3xl cursor-pointer sm:py-4 py-8">
+                  <Link onClick={toggle} href="/">
+                    Home
+                  </Link>
+                </motion.li>
+                <motion.li className="text-3xl cursor-pointer sm:py-4 py-8">
+                  <Link onClick={toggle} href="/about">
+                    About
+                  </Link>
+                </motion.li>
+                <motion.li className="text-3xl cursor-pointer sm:py-4 py-8">
+                  <Link onClick={toggle} href="/skills">
+                    Skills
+                  </Link>
+                </motion.li>
+                <motion.li className="text-3xl cursor-pointer sm:py-4 py-8">
+                  <Link onClick={toggle} href="/projects">
+                    Projects
+                  </Link>
+                </motion.li>
+                <motion.li className="text-3xl cursor-pointer sm:py-4 py-8">
+                  <Link onClick={toggle} href="/contact">
+                    Contact
+                  </Link>
+                </motion.li>
+              </motion.ul>
+            )}
+          </AnimatePresence>
+        </nav>
+      </div>
+    </>
   )
 }
 
@@ -165,6 +169,16 @@ type NavBtnProps = {
 const NavBtn = ({ text, href }: NavBtnProps) => {
   const [show, setShow] = useState(false)
 
+  const path = usePathname()
+
+  const shouldHighlight = () => {
+    if (path === "/") {
+      return "home".includes(text.toLowerCase())
+    } else {
+      return path.includes(text.toLowerCase())
+    }
+  }
+
   return (
     <Link href={href}>
       <motion.div
@@ -174,7 +188,7 @@ const NavBtn = ({ text, href }: NavBtnProps) => {
       >
         {text}
         <AnimatePresence mode="wait">
-          {show && (
+          {(show || shouldHighlight()) && (
             <motion.div
               className="absolute w-full origin-left h-[2px] bg-[#ff5f1f]"
               variants={btnVariant}
