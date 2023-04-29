@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom css */
+html,
+body,
+#root {
+  user-select: none;
+  touch-action: none;
+  outline: none;
+  overflow-x: hidden;
+}
+
 .btn:hover {
   box-shadow: 0px 0px 10px #ff5f1f;
 }

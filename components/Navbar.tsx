@@ -11,8 +11,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-20 bg-transparent" />
-      <div className="w-full h-20 fixed top-0 bg-[#000033ed] text-white z-10 select-none">
+      <div className="w-full h-20 bg-transparent z-10" />
+      <div className="w-full h-20 fixed top-0 bg-[#00003369] text-white z-10 select-none">
         <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 md:pt-4">
           {/* Logo */}
           <Link href="/" className="cursor-pointer" title="M.A.">

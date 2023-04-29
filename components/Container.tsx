@@ -27,27 +27,17 @@ const containerVariant: Variants = {
 type ContainerProps = {
   children: React.ReactNode
   className?: string
-  override?: boolean
   style?: {}
 }
 
 /**
  * The container for every page
  */
-const Container = ({
-  children,
-  className,
-  override,
-  style,
-}: ContainerProps) => {
+const Container = ({ children, className, style }: ContainerProps) => {
   return (
     <motion.div
+      className={`w-full h-full text-2xl md:pl-20 p-8 max-w-[1000px] mx-auto text-white ${className}`}
       style={style}
-      className={
-        override
-          ? className
-          : `w-full h-full text-2xl md:pl-20 px-8 py-4 max-w-[1000px] mx-auto flex flex-col justify-center text-white ${className}`
-      }
       variants={containerVariant}
       initial="hidden"
       animate="visible"
