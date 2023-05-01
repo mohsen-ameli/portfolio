@@ -6,7 +6,6 @@ html,
 body,
 #root {
   user-select: none;
-  touch-action: none;
   outline: none;
   overflow-x: hidden;
 }

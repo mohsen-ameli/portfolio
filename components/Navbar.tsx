@@ -19,7 +19,7 @@ const Navbar = () => {
             <motion.img
               drag
               dragSnapToOrigin={true}
-              className="w-16"
+              className="w-16 select-none"
               src="/images/logo.png"
               alt=""
             />

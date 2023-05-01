@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar"
 import { Roboto_Slab } from "next/font/google"
 import Experience from "./experience"
 import { Analytics } from "@vercel/analytics/react"
-import Transition from "./transition"
 
 export const metadata = {
   title: "Mohsen's Portfolio | Home",
@@ -23,7 +22,9 @@ const RootLayout = ({ children }: Node) => {
 
         <Navbar />
 
-        <Transition>{children}</Transition>
+        {children}
+
+        {/* <Transition>{children}</Transition> */}
       </body>
     </html>
   )

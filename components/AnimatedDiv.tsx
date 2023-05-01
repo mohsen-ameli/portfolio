@@ -1,5 +1,7 @@
+"use client"
+
 import { ReactNode } from "react"
-import { motion } from "framer-motion"
+import { animated as a, useSpring } from "react-spring"
 
 type AnimatedDivProps = {
   children: ReactNode
@@ -10,7 +12,16 @@ type AnimatedDivProps = {
  * For entrance animation
  */
 const AnimatedDiv = ({ children, className }: AnimatedDivProps) => {
-  return <motion.div className={className}>{children}</motion.div>
+  const springs = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  })
+
+  return (
+    <a.div className={className} style={springs}>
+      {children}
+    </a.div>
+  )
 }
 
 export default AnimatedDiv
