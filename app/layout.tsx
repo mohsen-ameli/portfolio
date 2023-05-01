@@ -2,8 +2,9 @@ import "./globals.css"
 import { Node } from "@/types/main.type"
 import Navbar from "@/components/Navbar"
 import { Roboto_Slab } from "next/font/google"
-import Layout from "./_layout"
 import Experience from "./experience"
+import { Analytics } from "@vercel/analytics/react"
+import Transition from "./transition"
 
 export const metadata = {
   title: "Mohsen's Portfolio | Home",
@@ -16,11 +17,13 @@ const RootLayout = ({ children }: Node) => {
   return (
     <html lang="en">
       <body className={"bg-[#000033] select-none " + inter.className}>
+        <Analytics />
+
         <Experience />
 
         <Navbar />
 
-        <Layout>{children}</Layout>
+        <Transition>{children}</Transition>
       </body>
     </html>
   )

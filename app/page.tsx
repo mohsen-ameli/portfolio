@@ -1,7 +1,7 @@
 "use client"
 
 import Typed from "react-typed"
-import { BsGithub, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs"
+import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs"
 import { RiNewspaperLine } from "react-icons/ri"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
@@ -13,9 +13,9 @@ import Container from "@/components/Container"
 
 const Home = () => {
   return (
-    <div>
+    <>
+      {/* Name and other info */}
       <Container className="pt-8 md:pt-32">
-        {/* Name and other info */}
         <AnimatedDiv>
           <div className="text-[#FF5F1F]">Hi, my name is</div>
           <div className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-100">
@@ -123,7 +123,7 @@ const Home = () => {
             <button
               className="p-4 text-3xl mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-125 hover:ease-in-out duration-300"
-              // onClick={() => window.open("/resume/resume_dev.pdf", "_blank")}
+              onClick={() => window?.open("/resume/resume_dev.pdf", "_blank")}
               // @ts-ignore
               target="_blank"
               rel="noopener noreferrer"
@@ -134,7 +134,7 @@ const Home = () => {
           </Tippy>
         </div>
       </AnimatedDiv>
-    </div>
+    </>
   )
 }
 

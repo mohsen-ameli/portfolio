@@ -1,5 +1,5 @@
 import { Variants, motion } from "framer-motion"
-import React from "react"
+import { ReactNode } from "react"
 
 const containerVariant: Variants = {
   hidden: {
@@ -25,19 +25,17 @@ const containerVariant: Variants = {
 }
 
 type ContainerProps = {
-  children: React.ReactNode
+  children: ReactNode
   className?: string
-  style?: {}
 }
 
 /**
  * The container for every page
  */
-const Container = ({ children, className, style }: ContainerProps) => {
+const Container = ({ children, className }: ContainerProps) => {
   return (
     <motion.div
       className={`w-full h-full text-2xl md:pl-20 p-8 max-w-[1000px] mx-auto text-white ${className}`}
-      style={style}
       variants={containerVariant}
       initial="hidden"
       animate="visible"
