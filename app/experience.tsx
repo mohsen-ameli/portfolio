@@ -2,10 +2,13 @@
 
 import { Sparkles } from "@react-three/drei"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Vector3 } from "three"
 
 const Experience = () => {
+  // const [dpr, setDpr] = useState(1)
+  // useEffect(() => setDpr(Math.min(window.devicePixelRatio, 3)), [])
+
   return (
     <div className="w-screen h-screen absolute top-0 left-0 -z-10">
       <Canvas
@@ -13,7 +16,7 @@ const Experience = () => {
           alpha: true,
           antialias: true,
         }}
-        dpr={Math.min(window.devicePixelRatio, 3)}
+        // dpr={dpr}
       >
         <Experience0 />
       </Canvas>
@@ -26,7 +29,7 @@ const Experience0 = () => {
 
   const [center] = useState(new Vector3(0, 0, 0))
 
-  useFrame((state, delta) => {
+  useFrame(state => {
     const time = state.clock.getElapsedTime()
     const radius = 5
     const angle = time * 0.1

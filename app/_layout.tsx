@@ -2,14 +2,10 @@
 
 import { Node } from "@/types/main.type"
 import { AnimatePresence, motion } from "framer-motion"
-import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 const Layout = ({ children }: Node) => {
-  const [path, setPath] = useState<string>()
-
-  useEffect(() => {
-    setPath(window.location.pathname)
-  }, [])
+  const path = usePathname()
 
   return (
     <AnimatePresence mode="wait">

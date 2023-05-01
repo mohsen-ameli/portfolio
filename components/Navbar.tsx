@@ -13,7 +13,7 @@ const Navbar = () => {
     <>
       <div className="w-full h-20 bg-transparent z-10" />
       <div className="w-full h-20 fixed top-0 bg-[#00003369] text-white z-10 select-none">
-        <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 md:pt-4">
+        <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 lg:pt-4">
           {/* Logo */}
           <Link href="/" className="cursor-pointer" title="M.A.">
             <motion.img
@@ -27,13 +27,13 @@ const Navbar = () => {
 
           {/* Hamburger Menu */}
           <MenuToggle
-            className="md:hidden p-4 z-20"
+            className="lg:hidden p-4 z-20"
             toggle={() => toggle()}
             isOpen={nav}
           />
 
           {/* Desktop Navbar */}
-          <ul className="hidden md:flex items-center gap-x-32">
+          <ul className="hidden lg:flex items-center gap-x-32">
             <NavBtn text="Home" href="/" />
             <NavBtn text="About" href="/about" />
             <NavBtn text="Skills" href="/skills" />
@@ -45,7 +45,7 @@ const Navbar = () => {
           <AnimatePresence mode="wait">
             {nav && (
               <motion.ul
-                className="absolute md:hidden top-0 left-0 h-screen w-screen flex flex-col items-center justify-center bg-[#000033]"
+                className="absolute lg:hidden top-0 left-0 h-screen w-screen flex flex-col items-center justify-center bg-[#000033]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}

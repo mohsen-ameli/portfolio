@@ -12,7 +12,7 @@ const About = () => {
       <Title title="About Me" />
 
       <AnimatedDiv className="grid md:grid-cols-2 gap-8 max-w-[900px]">
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col md:items-end">
           <div className="text-xl md:text-4xl text-center md:text-right">
             Welcome to my Portfolio! Feel Free To Look Around!
           </div>
