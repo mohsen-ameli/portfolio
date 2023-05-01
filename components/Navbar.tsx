@@ -15,7 +15,11 @@ const Navbar = () => {
       <div className="w-full h-20 fixed top-0 bg-[#00003369] text-white z-10 select-none">
         <nav className="flex items-center justify-between max-w-[1240px] mx-auto p-4 lg:pt-4">
           {/* Logo */}
-          <Link href="/" className="cursor-pointer" title="M.A.">
+          <Link
+            href="/"
+            className="no-grab cursor-grab active:cursor-grabbing"
+            title="M.A."
+          >
             <motion.img
               drag
               dragSnapToOrigin={true}

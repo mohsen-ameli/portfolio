@@ -10,6 +10,11 @@ body,
   overflow-x: hidden;
 }
 
+.no-grab {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 .btn:hover {
   box-shadow: 0px 0px 10px #ff5f1f;
 }
