@@ -6,8 +6,8 @@ import { useEffect, useState } from "react"
 import { Vector3 } from "three"
 
 const Experience = () => {
-  // const [dpr, setDpr] = useState(1)
-  // useEffect(() => setDpr(Math.min(window.devicePixelRatio, 3)), [])
+  const [dpr, setDpr] = useState(1)
+  useEffect(() => setDpr(Math.min(window.devicePixelRatio, 3)), [])
 
   return (
     <div className="w-screen h-screen absolute top-0 left-0 -z-10">
@@ -16,7 +16,7 @@ const Experience = () => {
           alpha: true,
           antialias: true,
         }}
-        // dpr={dpr}
+        dpr={dpr}
       >
         <Experience0 />
       </Canvas>

@@ -4,7 +4,7 @@ import { skillsList } from "./skillsList"
 import { Canvas, ThreeEvent, useFrame, useThree } from "@react-three/fiber"
 import { Image, Text } from "@react-three/drei"
 import { Mesh } from "three"
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { Power0, Power2, gsap } from "gsap"
 
 /**
@@ -15,6 +15,9 @@ const LENGTH_X = 3.25
 const LENGTH_Y = 2.25
 
 const Skills = () => {
+  const [dpr, setDpr] = useState(1)
+  useEffect(() => setDpr(Math.min(window.devicePixelRatio, 3)), [])
+
   return (
     <div className="w-screen h-[600px]">
       <Canvas
@@ -22,11 +25,7 @@ const Skills = () => {
           alpha: true,
           antialias: true,
         }}
-        dpr={
-          typeof window !== "undefined"
-            ? Math.min(window.devicePixelRatio, 3)
-            : 1
-        }
+        dpr={dpr}
       >
         {skillsList.map(skill => (
           <Card3d
@@ -130,7 +129,7 @@ const Card3d = ({ index, img, name }: CardProps) => {
 
   // WARNING: Heavy math in this component, for the resize to work
   // Getting the left most element's x value
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     const w = window?.innerWidth
     let x = 0
     let y = 0
@@ -190,14 +189,14 @@ const Card3d = ({ index, img, name }: CardProps) => {
 
     setPos({ x, y, z: 0 })
     setId(id_)
-  }
+  }, [camera, index])
 
   // Resize stuff
   useEffect(() => {
     handleResize()
     window?.addEventListener("resize", handleResize)
     return () => window?.removeEventListener("resize", handleResize)
-  }, [])
+  }, [handleResize])
 
   return (
     <mesh
