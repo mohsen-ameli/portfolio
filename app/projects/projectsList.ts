@@ -2,23 +2,12 @@ export const projectsList = [
   {
     name: "backgammon",
     img: "/images/projects/3d-backgammon.jpg",
-    title: "3D-Backgammon",
+    title: "3D Backgammon",
     url1: "https://3d-backgammon.vercel.app/",
     url2: "https://github.com/mohsen-ameli/3d-backgammon",
     body1: "An online interactive single and multiplayer 3D backgammon game.",
     body2:
       "Built with React-Three-Fiber, Blender, Django, PyTorch, GSAP, React-Three-Rapier, and more. This is a fun project that I'm still working on. Feel free to check it out and play a couple games :)",
-  },
-  {
-    name: "ZarathusTrust",
-    img: "/images/projects/zarathustrust.jpg",
-    title: "ZarathusTrust",
-    url1: "https://zarathustrust.com/",
-    url2: "https://github.com/mohsen-ameli/money-moe-linux/",
-    body1:
-      "For testing purposes please use the following credentials to login. username: test_user, password: test_pass",
-    body2:
-      " ---> My first big project. This took me quite a while to build. I used Bootstrap and some custom CSS for styling, Django for the backend, and React for the frontend. I've hosted this website on Linode, Digital Ocean, Heroku, and a Raspberry Pi before.",
   },
   {
     name: "MyRoom",
@@ -30,6 +19,17 @@ export const projectsList = [
       "I built my room in 3D just for a bit of fun, and practice. **Loading time is a bit long for now, sorry :(**",
     body2:
       "I used React-Three-Fiber to bring the experience to life and Blender to model the whole scene. I also used GSAP to make the animations. Special thanks to Bruno Simon for his amazing course.",
+  },
+  {
+    name: "ZarathusTrust",
+    img: "/images/projects/zarathustrust.jpg",
+    title: "ZarathusTrust",
+    url1: "https://web-production-5197.up.railway.app/",
+    url2: "https://github.com/mohsen-ameli/money-moe-linux/",
+    body1:
+      "For testing purposes please use the following credentials to login. username: test_user, password: test_pass",
+    body2:
+      " ---> My first big project. This took me quite a while to build. I used Bootstrap and some custom CSS for styling, Django for the backend, and React for the frontend. I've hosted this website on Linode, Digital Ocean, Heroku, and a Raspberry Pi before.",
   },
   {
     name: "DisneyClone",

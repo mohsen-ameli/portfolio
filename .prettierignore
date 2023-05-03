@@ -1,0 +1,7 @@
+node_modules
+public
+.next
+.vsocde
+next-env.d.ts
+*.lock
+*.log

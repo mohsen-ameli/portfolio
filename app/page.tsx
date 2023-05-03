@@ -18,13 +18,13 @@ const Home = () => {
       <Container className="pt-8 md:pt-32">
         <AnimatedDiv>
           <div className="text-[#FF5F1F]">Hi, my name is</div>
-          <div className="text-4xl sm:text-5xl md:text-7xl font-semibold text-sky-100">
+          <div className="text-4xl sm:text-5xl md:text-7xl font-semibold text-[#e0f2fe]">
             <span className="text-[#FF5F1F] font-serif">M</span>ohsen{" "}
             <span className="text-[#FF5F1F] font-serif">A</span>meli
           </div>
         </AnimatedDiv>
         <AnimatedDiv>
-          <div className="text-3xl sm:text-4xl md:text-[55px] md:leading-[1] font-semibold text-sky-600">
+          <div className="text-3xl sm:text-4xl md:text-[55px] md:leading-[1] font-semibold text-[#0284c7]">
             I&apos;m a <span></span>
             <Typed
               strings={[
@@ -38,7 +38,7 @@ const Home = () => {
             />
           </div>
         </AnimatedDiv>
-        <AnimatedDiv className="py-4 text-2xl text-sky-100">
+        <AnimatedDiv className="py-4 text-2xl text-[#e0f2fe]">
           <Typed
             strings={[
               "I build amazing, good looking, and responsive websites using front and back end tools. Two of my favorite frameworks are React and Django.",
@@ -103,7 +103,7 @@ const Home = () => {
             <Link
               className="p-4 text-3xl mx-auto cursor-pointer rounded-full bg-gradient-to-r from-sky-700 to-[#FF5F1F]
             shadow-xl hover:scale-125 hover:ease-in-out duration-300"
-              href="https://twitter.com/AmeliMohsen"
+              href="https://twitter.com/MohsenAmeli"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
