@@ -11,7 +11,7 @@ const Floor = () => {
       <mesh position={[0, -2, 0]} receiveShadow>
         <boxGeometry args={[20, 20, 0.1]} />
         <meshStandardMaterial
-          color="purple"
+          color="indigo"
           transparent
           opacity={0.3}
           side={DoubleSide}

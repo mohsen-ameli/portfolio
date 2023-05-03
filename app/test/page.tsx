@@ -1,17 +1,36 @@
 "use client"
 
-import { OrbitControls, OrbitControlsProps } from "@react-three/drei"
-import { Canvas } from "@react-three/fiber"
-import { Physics } from "@react-three/rapier"
+import { OrbitControls } from "@react-three/drei"
+import { Canvas, useThree } from "@react-three/fiber"
+import {
+  ConvexHullCollider,
+  CuboidCollider,
+  Physics,
+  RigidBody,
+  RoundCuboidCollider,
+} from "@react-three/rapier"
 import { OrbitControls as OrbitControlType } from "three-stdlib/controls/OrbitControls"
 import { BattleHammer, ModernHammer } from "./Hammer"
 import Floor from "./Floor"
 import { Text3DType } from "./Home.type"
 import Letter3D from "./Letter3D"
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
+import { useSpring, a } from "@react-spring/three"
+import { useDrag, useGesture } from "@use-gesture/react"
 
 const Test = () => {
+  const [dpr, setDpr] = useState(1)
+  const [width, setWidth] = useState(0)
+  useEffect(() => {
+    setDpr(Math.min(window.devicePixelRatio, 3))
+    setWidth(window.innerWidth)
+  }, [])
+
   const orbit = useRef<OrbitControlType>(null!)
+
+  const orbitEnable = (newVal: boolean) => {
+    orbit.current.enabled = newVal
+  }
 
   const words: Text3DType[] = [
     { id: 0, text: "H", y: 0, z: -2, x: -6, scale: 0.5, color: "#FF5F1F" },
@@ -52,18 +71,21 @@ const Test = () => {
       <div className="w-full h-screen absolute -z-10 left-0 top-0">
         <Canvas
           camera={{
-            position: [0, window.innerWidth <= 425 ? 15 : 7, 2],
+            position: [0, width <= 425 ? 15 : 7, 2],
           }}
           shadows
+          dpr={dpr}
         >
           <ambientLight intensity={0.5} />
-          <directionalLight position={[0, 1, 1]} castShadow />
+          <directionalLight position={[0, 1, 2]} castShadow />
           <OrbitControls ref={orbit} />
 
-          <Physics debug={false}>
+          <Physics debug={true}>
             <Floor />
             <ModernHammer />
             <BattleHammer />
+
+            <Dodecahedron orbitEnable={orbitEnable} />
 
             {words.map(letter => (
               <Letter3D key={letter.id} letter={letter} />
@@ -71,6 +93,54 @@ const Test = () => {
           </Physics>
         </Canvas>
       </div>
+    </>
+  )
+}
+
+const Dodecahedron = ({
+  orbitEnable,
+}: {
+  orbitEnable: (newVal: boolean) => void
+}) => {
+  const { viewport } = useThree()
+  const { factor } = viewport
+
+  const [spring, set] = useSpring(() => ({
+    position: [0, -0.5, 0],
+    rotation: [0, 0, 0],
+    config: { friction: 10 },
+  }))
+
+  const bind = useDrag(({ dragging, offset: [x, y] }) => {
+    if (!dragging) {
+      orbitEnable(true)
+      return
+    }
+
+    orbitEnable(false)
+    set({
+      position: [x / factor, -0.5, y / factor, 0],
+      rotation: [y / factor, x / factor, 0],
+    })
+  })
+
+  return (
+    <>
+      {/* <RigidBody
+        ref={checker}
+        type="kinematicPosition"
+        position={pos as Vector3}
+      >
+        <ConvexHullCollider args={} />
+      </RigidBody> */}
+
+      <RigidBody type="dynamic" colliders="hull">
+        {/* @ts-ignore */}
+        <a.mesh {...spring} {...bind()} castShadow>
+          <dodecahedronBufferGeometry args={[1, 0]} />
+          <meshNormalMaterial />
+        </a.mesh>
+      </RigidBody>
     </>
   )
 }
