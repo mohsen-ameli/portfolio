@@ -6,6 +6,7 @@ import {
   ConvexHullCollider,
   CuboidCollider,
   Physics,
+  RapierRigidBody,
   RigidBody,
   RoundCuboidCollider,
 } from "@react-three/rapier"
@@ -17,6 +18,8 @@ import Letter3D from "./Letter3D"
 import { useEffect, useRef, useState } from "react"
 import { useSpring, a } from "@react-spring/three"
 import { useDrag, useGesture } from "@use-gesture/react"
+import { Vector3 } from "three"
+import Stormtrooper from "./Stormtrooper"
 
 const Test = () => {
   const [dpr, setDpr] = useState(1)
@@ -71,21 +74,30 @@ const Test = () => {
       <div className="w-full h-screen absolute -z-10 left-0 top-0">
         <Canvas
           camera={{
-            position: [0, width <= 425 ? 15 : 7, 2],
+            position: [
+              0,
+              5, //width <= 425 ? 15 : 7,
+              0, // 2
+            ],
           }}
           shadows
           dpr={dpr}
         >
           <ambientLight intensity={0.5} />
-          <directionalLight position={[0, 1, 2]} castShadow />
+          <directionalLight
+            position={[0, 1, 2]}
+            castShadow
+            shadow-mapSize-width={2048}
+            shadow-mapSize-height={2048}
+          />
           <OrbitControls ref={orbit} />
 
           <Physics debug={true}>
             <Floor />
             <ModernHammer />
             <BattleHammer />
-
-            <Dodecahedron orbitEnable={orbitEnable} />
+            {/* <Dodecahedron orbitEnable={orbitEnable} /> */}
+            <Stormtrooper />
 
             {words.map(letter => (
               <Letter3D key={letter.id} letter={letter} />
@@ -102,45 +114,71 @@ const Dodecahedron = ({
 }: {
   orbitEnable: (newVal: boolean) => void
 }) => {
-  const { viewport } = useThree()
-  const { factor } = viewport
+  const { size, viewport } = useThree()
+  const aspect = size.width / viewport.width
 
-  const [spring, set] = useSpring(() => ({
-    position: [0, -0.5, 0],
+  const rigidBody = useRef<RapierRigidBody>(null)
+
+  const [position, setPosition] = useState<[number, number, number]>()
+
+  const [spring, springApi] = useSpring(() => ({
+    position: [0, 0, 0],
     rotation: [0, 0, 0],
     config: { friction: 10 },
   }))
+  const bind = useGesture({
+    onDrag: ({ dragging, offset: [x, y] }) => {
+      if (!dragging) {
+        orbitEnable(true)
+        return
+      }
 
-  const bind = useDrag(({ dragging, offset: [x, y] }) => {
-    if (!dragging) {
-      orbitEnable(true)
-      return
-    }
+      orbitEnable(false)
+      springApi.start({
+        position: [x / aspect, 0, y / aspect],
+        rotation: [y / aspect, x / aspect, 0],
+      })
 
-    orbitEnable(false)
-    set({
-      position: [x / factor, -0.5, y / factor, 0],
-      rotation: [y / factor, x / factor, 0],
-    })
+      setPosition([x / aspect, 0, y / aspect])
+
+      // rigidBody.current?.setTranslation(
+      //   {
+      //     x: x / factor,
+      //     y: 0,
+      //     z: y / factor,
+      //   },
+      //   true
+      // )
+
+      // rigidBody.current?.setRotation(
+      //   {
+      //     x: y / factor,
+      //     y: x / factor,
+      //     z: 0,
+      //     w: 0,
+      //   },
+      //   true
+      // )
+    },
   })
 
   return (
     <>
-      {/* <RigidBody
-        ref={checker}
-        type="kinematicPosition"
-        position={pos as Vector3}
+      <RigidBody
+        type="dynamic"
+        colliders={false}
+        ref={rigidBody}
+        position={position}
       >
-        <ConvexHullCollider args={} />
-      </RigidBody> */}
-
-      <RigidBody type="dynamic" colliders="hull">
-        {/* @ts-ignore */}
-        <a.mesh {...spring} {...bind()} castShadow>
-          <dodecahedronBufferGeometry args={[1, 0]} />
-          <meshNormalMaterial />
-        </a.mesh>
+        {/* <ConvexHullCollider args={[1, 1, 1]} /> */}
+        <CuboidCollider args={[1, 1, 1]} />
       </RigidBody>
+
+      {/* @ts-ignore */}
+      <a.mesh {...spring} {...bind()} castShadow>
+        <dodecahedronBufferGeometry args={[1.4, 0]} />
+        <meshNormalMaterial />
+      </a.mesh>
     </>
   )
 }

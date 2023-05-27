@@ -16,6 +16,11 @@ const Credits = () => {
         licensed under Creative Commons Attribution
         (http://creativecommons.org/licenses/by/4.0/).
       </div>
+
+      <div>
+        Stormtrooper by https://sketchfab.com/strykerdoesgames,
+        https://creativecommons.org/licenses/by/4.0/
+      </div>
     </Container>
   )
 }
