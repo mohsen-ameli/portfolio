@@ -3,7 +3,7 @@ export const projectsList = [
     name: "backgammon",
     img: "/images/projects/3d-backgammon.jpg",
     title: "3D Backgammon",
-    url1: "https://3d-backgammon.vercel.app/",
+    url1: "https://www.3dbackgammon.com/",
     url2: "https://github.com/mohsen-ameli/3d-backgammon",
     body1: "An online interactive single and multiplayer 3D backgammon game.",
     body2:

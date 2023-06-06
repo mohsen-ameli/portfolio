@@ -2,19 +2,31 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "files.exclude": {
-    "**/.git": false,
-    "**/.svn": false,
-    "**/.hg": false,
-    "**/CVS": false,
-    "**/.DS_Store": false,
-    "**/Thumbs.db": false
-  },
-  "explorerExclude.backup": {
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true
-  }
+    "**/Thumbs.db": true,
+    ".vscode": true,
+    ".next": true,
+    "node_modules": true,
+    "tsconfig.json": true,
+    "yarn.lock": true,
+    "sandbox.config.json": true,
+    "README.md": true,
+    "postcss.config.js": true,
+    "next-env.d.ts": true,
+    "LICENSE": true,
+    ".prettierrc": true,
+    ".prettierignore": true,
+    ".gitignore": true,
+    ".eslintrc": true,
+    ".eslintignore": true,
+    ".editorconfig": true,
+    "tailwind.config.js": true,
+    ".eslintrc.json": true,
+    "LICENSE.md": true
+  },
+  "explorerExclude.backup": {}
 }
