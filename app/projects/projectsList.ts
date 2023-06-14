@@ -1,7 +1,7 @@
 export const projectsList = [
   {
     name: "backgammon",
-    img: "/images/projects/3d-backgammon.jpg",
+    img: "/images/projects/3d-backgammon.webp",
     title: "3D Backgammon",
     url1: "https://www.3dbackgammon.com/",
     url2: "https://github.com/mohsen-ameli/3d-backgammon",
@@ -11,7 +11,7 @@ export const projectsList = [
   },
   {
     name: "MyRoom",
-    img: "/images/projects/my_room.png",
+    img: "/images/projects/my_room.webp",
     title: "My Room In 3D",
     url1: "https://heheboi.vercel.app/",
     url2: "https://github.com/mohsen-ameli/my-room",
@@ -22,7 +22,7 @@ export const projectsList = [
   },
   {
     name: "ZarathusTrust",
-    img: "/images/projects/zarathustrust.jpg",
+    img: "/images/projects/zarathustrust.webp",
     title: "ZarathusTrust",
     url1: "https://web-production-5197.up.railway.app/",
     url2: "https://github.com/mohsen-ameli/money-moe-linux/",
@@ -33,7 +33,7 @@ export const projectsList = [
   },
   {
     name: "DisneyClone",
-    img: "/images/projects/disney.jpg",
+    img: "/images/projects/disney.webp",
     title: "Disney Clone",
     url1: "https://dizney.vercel.app/",
     url2: "https://github.com/mohsen-ameli/disney-clone/",
@@ -43,7 +43,7 @@ export const projectsList = [
   },
   {
     name: "Randimalz",
-    img: "/images/projects/randimalz.png",
+    img: "/images/projects/randimalz.webp",
     title: "Randimalz",
     url1: "https://randimalz.vercel.app/",
     url2: "https://github.com/mohsen-ameli/randimalz/",
@@ -54,7 +54,7 @@ export const projectsList = [
   },
   {
     name: "PersianFood",
-    img: "/images/projects/persian_food.jpg",
+    img: "/images/projects/persian_food.webp",
     title: "Persian Food",
     url1: "https://persian-food.vercel.app/",
     url2: "https://github.com/mohsen-ameli/persian-food/",
