@@ -1,5 +1,3 @@
-"use client"
-
 import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 import Link from "next/link"
 import AnimatedDiv from "@/components/AnimatedDiv"

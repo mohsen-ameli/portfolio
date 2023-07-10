@@ -1,3 +1,5 @@
+"use client"
+
 import { MouseEvent, useRef } from "react"
 import { useSpring, animated } from "@react-spring/web"
 import Image from "next/image"
@@ -20,20 +22,16 @@ const config = {
   velocity: 0,
 }
 
-type CardProps = {
-  img: string
-  name: string
-}
-
-const SpringCard = ({ img, name }: CardProps) => {
+const SpringCard = ({ img, name }: { img: string; name: string }) => {
   const cardRef = useRef<HTMLDivElement>(null!)
 
   const [{ xys }, api] = useSpring(() => ({ xys: [0, 0, 1], config }), [config])
 
-  const handleMouseLeave = () =>
+  const handleMouseLeave = () => {
     api.start({
       xys: [0, 0, 1],
     })
+  }
 
   const handleMouseMove = (
     e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>

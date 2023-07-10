@@ -28,5 +28,6 @@
     ".eslintrc.json": true,
     "LICENSE.md": true
   },
-  "explorerExclude.backup": {}
+  "explorerExclude.backup": {},
+  "cSpell.words": ["Particless", "tsparticles"]
 }

@@ -1,7 +1,5 @@
-"use client"
-
-import { skillsList } from "./skillsList"
-import SpringCard from "./springCard"
+import { skillsList } from "./(stuff)/skillsList"
+import SpringCard from "./(stuff)/springCard"
 import Container from "@/components/Container"
 
 /**
@@ -16,9 +14,6 @@ const Skills = () => {
         ))}
       </div>
     </Container>
-    // <div className="w-screen h-[600px]">
-    //   <R3fCards />
-    // </div>
   )
 }
 

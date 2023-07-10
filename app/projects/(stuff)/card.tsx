@@ -1,9 +1,9 @@
 import { MdOutlineViewInAr } from "react-icons/md"
 import { BsCodeSlash } from "react-icons/bs"
-import { useState } from "react"
-import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import Paragraph from "./paragraph"
+import CardMotion from "./cardMotion"
 
 type CardProps = {
   img: string
@@ -15,15 +15,8 @@ type CardProps = {
 }
 
 const Card = ({ img, title, url1, url2, body1, body2 }: CardProps) => {
-  const [show, setShow] = useState(false)
-
   return (
-    <motion.div
-      className="w-full flex md:flex-row flex-col justify-between text-center rounded-lg bg-sky-900 text-white my-4"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: false }}
-    >
+    <CardMotion>
       {/* Image */}
       <Image
         className="md:h-[400px] md:max-w-[350px] h-[250px] w-full bg-cover object-cover bg-center bg-no-repeat bg-origin-content group rounded-lg"
@@ -41,16 +34,7 @@ const Card = ({ img, title, url1, url2, body1, body2 }: CardProps) => {
         </h1>
 
         {/* Paragraph */}
-        <p className="text-lg md:text-xl leading-relaxed p-4 select-text">
-          {body1}
-          <span className={!show ? "hidden ml-1" : "ml-1"}>{body2}</span>
-          <button
-            className="mx-2 px-1 btn text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-md hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
-            onClick={() => setShow(!show)}
-          >
-            {!show ? "View More" : "View Less"}
-          </button>
-        </p>
+        <Paragraph body1={body1} body2={body2} />
 
         {/* Buttons */}
         <div className="flex justify-evenly">
@@ -72,7 +56,7 @@ const Card = ({ img, title, url1, url2, body1, body2 }: CardProps) => {
           </Link>
         </div>
       </div>
-    </motion.div>
+    </CardMotion>
   )
 }
 

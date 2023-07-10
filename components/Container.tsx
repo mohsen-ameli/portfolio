@@ -1,3 +1,5 @@
+"use client"
+
 import { ReactNode } from "react"
 import { animated as a, useTransition } from "react-spring"
 

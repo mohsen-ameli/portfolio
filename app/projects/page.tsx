@@ -1,8 +1,6 @@
-"use client"
-
 import Container from "@/components/Container"
-import { projectsList } from "./projectsList"
-import Card from "./card"
+import { projectsList } from "./(stuff)/projectsList"
+import Card from "./(stuff)/card"
 
 const Projects = () => {
   return (
