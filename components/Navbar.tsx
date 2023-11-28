@@ -92,13 +92,11 @@ const Navbar = () => {
 /**
  * Menu Toggle
  */
-type MenuToggleProps = {
+const MenuToggle = ({ toggle, isOpen, className }: {
   toggle: () => void
   isOpen: boolean
   className: string
-}
-
-const MenuToggle = ({ toggle, isOpen, className }: MenuToggleProps) => (
+}) => (
   <motion.button
     className={className}
     onClick={toggle}
@@ -165,12 +163,10 @@ const btnVariant = {
 /**
  * Nav Button Component
  */
-type NavBtnProps = {
+const NavBtn = ({ text, href }: {
   text: string
   href: string
-}
-
-const NavBtn = ({ text, href }: NavBtnProps) => {
+}) => {
   const [show, setShow] = useState(false)
 
   const path = usePathname()

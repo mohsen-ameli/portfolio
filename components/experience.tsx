@@ -5,7 +5,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { useEffect, useRef, useState } from "react"
 import { BufferGeometry, Material, Points, Vector3 } from "three"
 
-const Experience = () => {
+const ExperienceContainer = () => {
   const [dpr, setDpr] = useState(1)
   useEffect(() => setDpr(Math.min(window.devicePixelRatio, 3)), [])
 
@@ -18,13 +18,13 @@ const Experience = () => {
         }}
         dpr={dpr}
       >
-        <Experience0 />
+        <Experience />
       </Canvas>
     </div>
   )
 }
 
-const Experience0 = () => {
+const Experience = () => {
   const { camera } = useThree()
 
   const sparkles = useRef<Points<BufferGeometry, Material | Material[]>>(null!)
@@ -57,4 +57,4 @@ const Experience0 = () => {
   return <Sparkles ref={sparkles} count={1000} size={3} scale={20} />
 }
 
-export default Experience
+export default ExperienceContainer

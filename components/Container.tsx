@@ -26,15 +26,13 @@ import { animated as a, useTransition } from "react-spring"
 //   },
 // }
 
-type ContainerProps = {
-  children: ReactNode
-  className?: string
-}
-
 /**
  * The container for every page
  */
-const Container = ({ children, className }: ContainerProps) => {
+const Container = ({ children, className }: {
+  children: ReactNode
+  className?: string
+}) => {
   const transitions = useTransition(children, {
     from: { opacity: 0, y: -100 },
     enter: { opacity: 1, y: 0 },

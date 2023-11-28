@@ -2,7 +2,7 @@ import "../components/globals.css"
 import { Node } from "@/types/main.type"
 import Navbar from "@/components/Navbar"
 import { Roboto_Slab } from "next/font/google"
-import Experience from "../components/experience"
+import ExperienceContainer from "../components/experience"
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
@@ -17,7 +17,7 @@ const RootLayout = ({ children }: Node) => {
     <html lang="en">
       <body className={"bg-[#000033] select-none " + inter.className}>
         <Analytics />
-        <Experience />
+        <ExperienceContainer />
         <Navbar />
         {children}
       </body>

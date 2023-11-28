@@ -179,7 +179,6 @@ const Card3d = ({ index, img, name }: CardProps) => {
       {/* <boxGeometry args={[3.25, 2.25, 0.5]} /> */}
       <planeGeometry args={[LENGTH_X, LENGTH_Y]} />
 
-      {/* eslint-disable */}
       <Image
         transparent
         url={img}
