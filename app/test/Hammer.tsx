@@ -4,7 +4,7 @@ import { RigidBody } from "@react-three/rapier"
 import { GLTFResult } from "./Home.type"
 
 const ModernHammer = () => {
-  const hammer = useGLTF("/models/hammer_of_dwarf.glb") as GLTFResult
+  const hammer = useGLTF("/models/hammer_of_dwarf.glb") as unknown as GLTFResult
 
   useEffect(() => {
     hammer.scene.traverse(obj => {
@@ -26,7 +26,7 @@ const ModernHammer = () => {
 }
 
 const BattleHammer = () => {
-  const hammer = useGLTF("/models/battle_hammer.glb") as GLTFResult
+  const hammer = useGLTF("/models/battle_hammer.glb") as unknown as GLTFResult
 
   useEffect(() => {
     hammer.scene.traverse(obj => {

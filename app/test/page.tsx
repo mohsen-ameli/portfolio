@@ -3,12 +3,10 @@
 import { OrbitControls } from "@react-three/drei"
 import { Canvas, useThree } from "@react-three/fiber"
 import {
-  ConvexHullCollider,
   CuboidCollider,
   Physics,
   RapierRigidBody,
-  RigidBody,
-  RoundCuboidCollider,
+  RigidBody
 } from "@react-three/rapier"
 import { OrbitControls as OrbitControlType } from "three-stdlib/controls/OrbitControls"
 import { BattleHammer, ModernHammer } from "./Hammer"
@@ -16,9 +14,8 @@ import Floor from "./Floor"
 import { Text3DType } from "./Home.type"
 import Letter3D from "./Letter3D"
 import { useEffect, useRef, useState } from "react"
-import { useSpring, a } from "@react-spring/three"
-import { useDrag, useGesture } from "@use-gesture/react"
-import { Vector3 } from "three"
+import { useSpring, a } from "react-spring"
+import { useGesture } from "@use-gesture/react"
 import Stormtrooper from "./Stormtrooper"
 
 const Test = () => {
