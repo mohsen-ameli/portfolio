@@ -1,8 +1,11 @@
 import Container from "@/components/Container"
+import Title from "@/components/Title"
 
 const Credits = () => {
   return (
-    <Container>
+    <Container className="flex flex-col gap-8">
+      <Title title="Credits" />
+
       <div>
         &quot;Hammer of Dwarf&quot; (https://skfb.ly/ooHYo) by RomanGurd is
         licensed under Creative Commons Attribution

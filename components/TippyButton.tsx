@@ -1,6 +1,9 @@
 "use client"
 
-import Tippy from "@tippyjs/react"
+import Tippy from '@tippyjs/react'
+import "tippy.js/dist/tippy.css"
+import "tippy.js/themes/light.css"
+import "tippy.js/animations/perspective.css"
 import { ReactNode } from "react"
 
 const TippyButton = ({
@@ -13,11 +16,10 @@ const TippyButton = ({
   icon: ReactNode
 }) => {
   const onClick = () => {
-    if (name === "Resume") {
+    if (name === "Resume")
       window?.open("/resume/resume.pdf", "_blank")
-    } else {
+    else
       window.open(link, "_blank", "noreferrer")
-    }
   }
 
   return (

@@ -1,8 +1,6 @@
 "use client"
 
-import AnimatedDiv from "@/components/AnimatedDiv"
 import React, { useRef, useState } from "react"
-import Input from "./input"
 import JSConfetti from "js-confetti"
 
 const Contact = () => {
@@ -61,7 +59,6 @@ const Contact = () => {
       onSubmit={handleSubmit}
       ref={formRef}
     >
-      <AnimatedDiv>
         <div className="mb-4 flex items-center w-full">
           <Input text="name" className="w-full mr-4" />
           <Input
@@ -77,12 +74,10 @@ const Contact = () => {
           autoComplete="off"
           name="message"
         />
-      </AnimatedDiv>
       <input type="hidden" name="favorite_color" value="" />
-      <AnimatedDiv className="self-center">
         <button
           type="submit"
-          className="w-[200px] cursor-pointer mt-8 py-2 px-4 flex items-center justify-center btn font-semibold text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-lg hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
+          className="self-center w-[200px] cursor-pointer mt-8 py-2 px-4 flex items-center justify-center btn font-semibold text-[#FF5F1F] border-2 border-[#FF5F1F] rounded-lg hover:bg-[#FF5F1F] hover:text-white hover:scale-105 duration-150"
           disabled={submitted}
         >
           {submitted ? (
@@ -91,9 +86,24 @@ const Contact = () => {
             <h1 className="w-full">Submit!</h1>
           )}
         </button>
-      </AnimatedDiv>
     </form>
   )
 }
 
 export default Contact
+
+const Input = ({ text, className, ...props }: React.InputHTMLAttributes<HTMLInputElement> & {
+  text: string
+  className: string
+}) => {
+  return (
+    <input
+      className={`bg-sky-900 rounded-md outline-none p-2 placeholder:capitalize focus:placeholder:text-transparent ${className}`}
+      type={text}
+      name={text}
+      placeholder={text}
+      required
+      {...props}
+    />
+  )
+}

@@ -2,7 +2,7 @@ import "../components/globals.css"
 import { Node } from "@/types/main.type"
 import Navbar from "@/components/Navbar"
 import { Roboto_Slab } from "next/font/google"
-import ExperienceContainer from "../components/experience"
+import ExperienceContainer from "../components/Experience"
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {

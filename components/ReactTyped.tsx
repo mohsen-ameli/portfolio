@@ -1,8 +1,8 @@
 "use client"
 
-import Typed from "react-typed"
+import { ReactTyped } from "react-typed"
 
-const Type = ({
+const Typed = ({
   strings,
   typeSpeed = 50,
   backSpeed = 80,
@@ -14,7 +14,7 @@ const Type = ({
   loop?: boolean
 }) => {
   return (
-    <Typed
+    <ReactTyped
       strings={strings}
       typeSpeed={typeSpeed}
       backSpeed={backSpeed}
@@ -23,4 +23,4 @@ const Type = ({
   )
 }
 
-export default Type
+export default Typed
